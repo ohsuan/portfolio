@@ -1,0 +1,1963 @@
+/* home.css */
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+:root {
+    --hero-pink: #E15B9B;
+    --hero-yellow: #F2F3BF;
+    --hero-beige: #DBB396;
+    --hero-blue: #69B7E2;
+    --hero-green: #CBDBD4;
+}
+
+
+/* =========================================================
+   HOME HERO
+========================================================= */
+
+.home-hero {
+    position: relative;
+    height: 250vh;
+    min-height: 1600px;
+    isolation: isolate;
+    overflow: visible;
+}
+
+.home-hero-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO — OCEAN OPENING BACKGROUND
+========================================================= */
+
+.home-ocean-scene {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F3F9FC 0%,
+            #F8FBFC 55%,
+            #FFFFFF 100%
+        );
+
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+
+.home-ocean-scene.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ---------- SVG Waves ---------- */
+
+.home-ocean-waves {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.home-ocean-waves svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* ---------- Static Soft Blue Waves ---------- */
+
+.ocean-wave--back {
+    fill: #70A8F4;
+    opacity: 0.30;
+    filter: blur(4px);
+    transform: translateY(35px);
+}
+
+.ocean-wave--front {
+    fill: #67BCE0;
+    opacity: 0.30;
+    filter: blur(2px);
+}
+
+
+/* =========================================================
+   HERO — BACKGROUND GLOW
+========================================================= */
+
+.home-glow-scene {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+
+    width: 120vw;
+    max-width: 1400px;
+    height: 500px;
+
+    transform: translateX(-50%) scale(1.4);
+    transform-origin: center top;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black 55%,
+        transparent 100%
+    );
+
+    opacity: 0;
+
+    transition:
+        opacity 1.5s ease;
+}
+
+.home-glow-scene.visible {
+    opacity: 1;
+}
+
+.home-glow {
+    position: absolute;
+    z-index: 0;
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+    opacity: 1;
+
+    animation:
+        drift
+        8s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+.home-glow--rose {
+    width: 298px;
+    height: 88px;
+    top: 212px;
+    left: 680px;
+
+    background: var(--hero-pink);
+
+    animation:
+        drift-right
+        8s
+        ease-in-out
+        infinite
+        alternate;
+
+    animation-delay: -12s;
+}
+
+.home-glow--yellow {
+    width: 517px;
+    height: 119px;
+    top: 119px;
+    left: 517px;
+
+    background: var(--hero-yellow);
+
+    animation-delay: -7s;
+}
+
+.home-glow--tan {
+    width: 359px;
+    height: 136px;
+    top: 153px;
+    left: 57px;
+
+    background: var(--hero-beige);
+
+    animation-delay: -18s;
+}
+
+.home-glow--blue {
+    width: 432px;
+    height: 80px;
+    top: 55px;
+    left: 446px;
+
+    background: var(--hero-blue);
+
+    animation:
+        drift-up
+        10s
+        ease-in-out
+        infinite
+        alternate;
+
+    animation-delay: -4s;
+}
+
+.home-glow--sage {
+    width: 440px;
+    height: 68px;
+    top: 35px;
+    left: -73px;
+
+    background: var(--hero-green);
+
+    animation-delay: -23s;
+}
+
+
+/* =========================================================
+   HERO — WORDMARK
+========================================================= */
+
+.home-wordmark {
+    position: absolute;
+    z-index: 2;
+
+    top: 50%;
+    left: calc(50% - 20px);
+
+    width: auto;
+    height: 1.25em;
+
+    font-family: var(--font-special);
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    transform: translate(-50%, -180px);
+}
+
+.wordmark-o-comma {
+    display: flex;
+    align-items: baseline;
+
+    white-space: nowrap;
+}
+
+.wordmark-o,
+.wordmark-comma {
+    display: inline-block;
+}
+
+.wordmark-comma {
+    margin-left: -10px;
+}
+
+
+/* ---------- Ocean / Hsuan Text ---------- */
+
+.wordmark-ending {
+    position: relative;
+
+    display: inline-block;
+
+    margin-left: 9px;
+
+    vertical-align: baseline;
+}
+
+.wordmark-cean {
+    display: inline-block;
+
+    opacity: 1;
+
+    transition:
+        opacity 0.8s ease;
+}
+
+.wordmark-cean.fade-out {
+    opacity: 0;
+}
+
+.wordmark-hsuan {
+    position: absolute;
+
+    top: 0.16em; /* hero hsuan高度 數字越大越低 */
+    left: 0;
+
+    display: inline-block;
+
+    font-size: 0.86em;
+    white-space: nowrap;
+
+    opacity: 0;
+
+    clip-path: inset(0 100% 0 0);
+
+    transition:
+        opacity 0.7s ease,
+        clip-path 1.2s ease;
+}
+
+.wordmark-hsuan.visible {
+    opacity: 1;
+
+    clip-path: inset(0 0 0 0);
+}
+
+
+/* =========================================================
+   HERO — LISTEN / UNDERSTAND / BUILD
+========================================================= */
+
+.home-process {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: min(1100px, calc(100% - 64px));
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+
+    transform: translate(-50%, 12px);
+
+    font-family: var(--font-special);
+    font-size: 21px;
+    font-weight: 400;
+    opacity: 0;
+
+    transition:
+        opacity 1s ease-out,
+        transform 1s ease-out;
+
+    z-index: 2;
+}
+
+.home-process.visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+
+/* ---------- Process Items ---------- */
+
+.home-process-item {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    text-align: center;
+}
+
+.process-label {
+    display: block;
+
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: var(--fw-bold);
+
+    white-space: nowrap;
+
+    color: var(--text-primary);
+
+    transition:
+        font-weight 0.4s ease;
+}
+
+
+/* ---------- Process Descriptions ---------- */
+
+.home-process-item p {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+
+    width: 260px;
+
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #767474;
+
+    opacity: 0;
+}
+
+
+/* ---------- Process Dashes ---------- */
+
+.home-process .process-dash {
+    flex: 0 0 auto;
+
+    margin: 0 16px;
+
+    font-size: 21px;
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   HERO — PROCESS SPREAD
+========================================================= */
+
+.home-process.spread {
+    bottom: 35px;
+
+    gap: 0;
+}
+
+.home-process.spread
+.home-process-item:nth-of-type(1) {
+    transform: translateX(-200px);
+}
+
+.home-process.spread
+.home-process-item:nth-of-type(2) {
+    transform: translateX(0);
+}
+
+.home-process.spread
+.home-process-item:nth-of-type(3) {
+    transform: translateX(200px);
+}
+
+.home-process.spread .process-dash {
+    width: 0;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    opacity: 0;
+
+    transform: scaleX(0);
+}
+
+
+/* =========================================================
+   HERO — PROCESS DESCRIPTIONS
+========================================================= */
+
+.home-process.reveal
+.home-process-item p {
+    display: block;
+
+    animation:
+        homeProcessTextIn
+        0.8s
+        ease-out
+        forwards;
+}
+
+@keyframes homeProcessTextIn {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+
+/* =========================================================
+   SELECTED WORK
+========================================================= */
+
+.selected-work {
+    position: relative;
+
+    width: min(var(--page-width-desktop), var(--page-width));
+    margin: 0 auto;
+
+    padding: 120px 0 140px;
+}
+
+.selected-work .section-heading {
+    margin-bottom: 48px;
+}
+
+.selected-work-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 32px;
+}
+
+
+/* =========================================================
+   SELECTED WORK — PROJECT CARD
+========================================================= */
+
+.selected-project-card {
+    display: block;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid var(--light-gray);
+    border-radius: 16px;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.selected-project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--gray);
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   SELECTED WORK — PROJECT VISUAL
+========================================================= */
+
+.selected-project-visual {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SELECTED WORK — SHARED
+========================================================= */
+
+.workflow-plus {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+
+    color: var(--dark-gray);
+}
+
+
+/* =========================================================
+   APPAREL — VISUAL
+========================================================= */
+
+.selected-project-apparel .selected-project-visual {
+    background: #FEF3E1;
+}
+
+.apparel-workflow {
+    position: relative;
+
+    width: max-content;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+
+/* ---------- Apparel Source ---------- */
+
+.apparel-source {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    flex: 0 0 auto;
+
+    margin-left: 0;
+}
+
+.apparel-source img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Apparel Default Channels ---------- */
+
+.apparel-default-channels {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-left: 14px;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+.apparel-channel {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    height: 50px;
+}
+
+.apparel-channel > img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Apparel Diagonal Arrows ---------- */
+
+.apparel-diagonal-arrow {
+    width: 18px;
+
+    flex: 0 0 18px;
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+
+    color: var(--dark-gray);
+
+    text-align: center;
+}
+
+.apparel-channel:first-child
+.apparel-diagonal-arrow {
+    transform: translateY(28px);
+}
+
+.apparel-channel:last-child
+.apparel-diagonal-arrow {
+    transform: translateY(-28px);
+}
+
+
+/* ---------- Apparel Horizontal Arrows ---------- */
+
+.apparel-flow-arrow {
+    flex: 0 0 auto;
+
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: var(--fw-regular);
+    line-height: 1;
+
+    color: var(--dark-gray);
+}
+
+
+/* ---------- Apparel Cart ---------- */
+
+.apparel-cart-flow {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    flex: 0 0 94px;
+
+    width: 94px;
+}
+
+.apparel-cart-flow > img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Apparel Dashed Line ---------- */
+
+.apparel-dashed {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 60px;
+    top: 50%;
+
+    width: 34px;
+    height: 2px;
+
+    background: repeating-linear-gradient(
+        to right,
+        var(--dark-gray) 0,
+        var(--dark-gray) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+
+    opacity: 0.8;
+
+    transform: translateY(-50%);
+}
+
+
+/* ---------- Apparel Hover Source Arrow ---------- */
+
+.apparel-hover-source-arrow {
+    position: absolute;
+
+    left: 150px;
+    top: 50%;
+
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 1;
+
+    color: var(--dark-gray);
+
+    opacity: 0;
+
+    transform: translateY(-50%);
+
+    transition:
+        opacity 0.4s ease;
+}
+
+
+/* ---------- Apparel Hover Channel ---------- */
+
+.apparel-hover-channel {
+    position: absolute;
+
+    left: 187px;
+    top: 50%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(-50%);
+
+    transition:
+        opacity 0.4s ease;
+}
+
+.apparel-extension {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 50px;
+}
+
+.apparel-extension img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Apparel Hover State ---------- */
+
+.selected-project-apparel:hover
+.apparel-default-channels {
+    opacity: 0;
+}
+
+.selected-project-apparel:hover
+.apparel-hover-source-arrow {
+    opacity: 1;
+}
+
+.selected-project-apparel:hover
+.apparel-hover-channel {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   HOSPITAL TRAINING — VISUAL
+========================================================= */
+
+.selected-project-training .selected-project-visual {
+    background: #E2ECF7;
+}
+
+.hospital-workflow {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ---------- Hospital System ---------- */
+
+.hospital-system {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+
+/* ---------- Hospital Paper ---------- */
+
+.hospital-paper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hospital-paper img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Hospital Arrow ---------- */
+
+.hospital-arrow {
+    margin: 20px 0;
+
+    font-size: 20px;
+    line-height: 1;
+
+    color: var(--dark-gray);
+}
+
+
+/* ---------- Hospital System Row ---------- */
+
+.hospital-system-row {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transform: translateX(5px);
+}
+
+
+/* ---------- Hospital Digital ---------- */
+
+.hospital-digital {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hospital-digital img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Hospital Added Paper ---------- */
+
+.hospital-paper-added {
+    width: 0;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        width 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.hospital-paper-added img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Hospital Plus ---------- */
+
+.hospital-plus {
+    width: 0;
+
+    overflow: hidden;
+
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+
+    color: var(--dark-gray);
+
+    opacity: 0;
+
+    transition:
+        width 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+/* ---------- Hospital Users ---------- */
+
+.hospital-users {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.hospital-user {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.hospital-user img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: contain;
+}
+
+
+/* ---------- Hospital User Positions ---------- */
+
+.hospital-learner {
+    transform: translateY(-4px);
+}
+
+.hospital-teacher {
+    transform: translateY(5px);
+}
+
+.hospital-admin {
+    transform: translateY(-6px);
+}
+
+
+/* ---------- Hospital Hover Positions ---------- */
+
+.selected-project-training:hover
+.hospital-learner {
+    transform: translate(30px, -4px);
+}
+
+.selected-project-training:hover
+.hospital-admin {
+    transform: translate(-22px, -6px);
+}
+
+
+/* ---------- Hospital Hover State ---------- */
+
+.selected-project-training:hover
+.hospital-plus {
+    width: 18px;
+    opacity: 1;
+}
+
+.selected-project-training:hover
+.hospital-paper-added {
+    width: 50px;
+    opacity: 1;
+}
+
+.selected-project-training:hover
+.hospital-teacher {
+    opacity: 0;
+}
+
+
+/* =========================================================
+   O,HSUAN — VISUAL
+========================================================= */
+
+.selected-project-visual--ohsuan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #F3F0EB;
+}
+
+.ohsuan-identity-card {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---------- Identity States ---------- */
+
+.ohsuan-identity {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+
+/* ---------- V1 ---------- */
+
+.ohsuan-identity--v1 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ohsuan-version {
+    position: absolute;
+
+    top: 28px;
+    left: 30px;
+
+    font-family: var(--font-body);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+
+    color: var(--gray);
+}
+
+
+/* ---------- V1 Identity Mark ---------- */
+
+.old-logo {
+    position: relative;
+
+    width: 135px;
+    height: 135px;
+}
+
+.old-logo-h {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+
+    font-family:
+        "Copperplate",
+        "Copperplate Gothic Light",
+        serif;
+
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1;
+
+    transform: translate(-50%, -50%);
+}
+
+.old-logo-ring {
+    position: absolute;
+    inset: 0;
+
+    animation:
+        old-logo-rotate
+        32s
+        linear
+        infinite;
+}
+
+.ring-letter {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 10px;
+
+    margin-left: -5px;
+    margin-top: -5px;
+
+    font-family:
+        "Cormorant Upright",
+        serif;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+
+    text-align: center;
+
+    transform-origin: 5px 5px;
+}
+
+
+/* ---------- Ring Letters ---------- */
+
+.l01 { transform: rotate(0deg) translateY(-45px) rotate(180deg); }
+.l02 { transform: rotate(15deg) translateY(-45px) rotate(180deg); }
+.l03 { transform: rotate(30deg) translateY(-45px) rotate(180deg); }
+.l04 { transform: rotate(45deg) translateY(-45px) rotate(180deg); }
+.l05 { transform: rotate(60deg) translateY(-45px) rotate(180deg); }
+.l06 { transform: rotate(75deg) translateY(-45px) rotate(180deg); }
+.l07 { transform: rotate(90deg) translateY(-45px) rotate(180deg); }
+.l08 { transform: rotate(105deg) translateY(-45px) rotate(180deg); }
+.l09 { transform: rotate(120deg) translateY(-45px) rotate(180deg); }
+.l10 { transform: rotate(135deg) translateY(-45px) rotate(180deg); }
+.l11 { transform: rotate(150deg) translateY(-45px) rotate(180deg); }
+.l12 { transform: rotate(165deg) translateY(-45px) rotate(180deg); }
+.l13 { transform: rotate(180deg) translateY(-45px) rotate(180deg); }
+.l14 { transform: rotate(195deg) translateY(-45px) rotate(180deg); }
+.l15 { transform: rotate(210deg) translateY(-45px) rotate(180deg); }
+.l16 { transform: rotate(225deg) translateY(-45px) rotate(180deg); }
+.l17 { transform: rotate(240deg) translateY(-45px) rotate(180deg); }
+.l18 { transform: rotate(255deg) translateY(-45px) rotate(180deg); }
+.l19 { transform: rotate(270deg) translateY(-45px) rotate(180deg); }
+.l20 { transform: rotate(285deg) translateY(-45px) rotate(180deg); }
+.l21 { transform: rotate(300deg) translateY(-45px) rotate(180deg); }
+.l22 { transform: rotate(315deg) translateY(-45px) rotate(180deg); }
+.l23 { transform: rotate(330deg) translateY(-45px) rotate(180deg); }
+.l24 { transform: rotate(345deg) translateY(-45px) rotate(180deg); }
+
+@keyframes old-logo-rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ---------- V2 ---------- */
+
+.ohsuan-identity--v2 {
+    opacity: 0;
+    transform: scale(0.94);
+}
+
+.ohsuan-new-mark {
+    font-family: var(--font-special);
+    font-weight: 500;
+
+    font-size:
+        clamp(
+            42px,
+            4vw,
+            64px
+        );
+
+    line-height: 1;
+    letter-spacing: -0.03em;
+
+    color: var(--text-primary);
+}
+
+.ohsuan-comma {
+    margin-left: -0.08em;
+    margin-right: 0.04em;
+}
+
+
+/* ---------- Hover Transition ---------- */
+
+.selected-project-ohsuan:hover
+.ohsuan-identity--v1 {
+    opacity: 0;
+    transform: scale(0.94);
+}
+
+.selected-project-ohsuan:hover
+.ohsuan-identity--v2 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =========================================================
+   AIZIMOV — VISUAL
+========================================================= */
+
+.selected-project-visual--aizimov {
+    background: #EEEEEE;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.aizimov-name-concept {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---------- DEFAULT CONCEPTS ---------- */
+
+.aizimov-concepts {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    gap: .4rem;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.aizimov-concept {
+    font-family: var(--font-primary);
+    font-size: 38px;
+    color: var(--text-primary);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+/* ---------- FINAL NAME ---------- */
+
+.aizimov-final-name {
+    position: absolute;
+
+    font-family: var(--font-primary);
+    font-size: clamp(42px, 5vw, 64px);
+    letter-spacing: 0.04em;
+    line-height: 1;
+
+    color: var(--text-primary);
+
+    opacity: 0;
+    transform: scale(0.96);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* ---------- HOVER ---------- */
+
+.selected-project-aizimov:hover .aizimov-concepts {
+    opacity: 0;
+    transform: scale(0.96);
+}
+
+.selected-project-aizimov:hover .aizimov-final-name {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* =========================================================
+   PROJECT CARD — CONTENT
+========================================================= */
+
+.selected-project-content {
+    padding: 28px 32px 32px;
+}
+
+
+/* ---------- Project Tags ---------- */
+
+.project-card-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 14px;
+}
+
+.project-card-tag {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 4px;
+
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+}
+
+
+/* ---------- Domain Tags ---------- */
+
+.selected-project-apparel
+.project-card-tag--domain {
+    background: #FEF3E1;
+    color: #E49832;
+}
+
+.selected-project-training
+.project-card-tag--domain {
+    background: #E2ECF7;
+    color: #2B75C8;
+}
+
+.selected-project-ohsuan
+.project-card-tag--domain {
+    background: #F3F0EB;
+    color: #9A6B45;
+}
+
+.selected-project-aizimov
+.project-card-tag--domain {
+    background: #EEEEEE;
+    color: #151515;
+}
+
+
+/* ---------- Work Type Tags ---------- */
+
+.selected-project-product
+.project-card-tag--type {
+    background: #E5EDE9;
+    color: #35A190;
+}
+
+.selected-project-naming
+.project-card-tag--type {
+    background: #F4EAF6;
+    color: #9A5EAD;
+}
+
+
+/* ---------- Project Title ---------- */
+
+.selected-project-title {
+    margin: 7px 0 0;
+
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+
+/* ---------- Project Description ---------- */
+
+.selected-project-content p {
+    max-width: 520px;
+
+    margin: 16px 0 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: var(--dark-gray);
+}
+
+
+/* ---------- Project Link ---------- */
+
+.selected-project-link {
+    display: inline-block;
+
+    margin-top: 24px;
+
+    font-size: 13px;
+
+    color: var(--dark-gray);
+}
+
+.selected-project-link span {
+    display: inline-block;
+
+    margin-left: 4px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.selected-project-card:hover
+.selected-project-link span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   ABOUT PREVIEW
+========================================================= */
+.home-about-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(21, 21, 21, 0.12);
+    margin-bottom: 3rem;
+}
+
+.home-about-preview {
+    padding: 0 0 3rem;
+}
+
+.home-about-preview-content {
+    margin-left: 1rem;
+}
+
+.home-about-link {
+    display: inline;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.home-about-link span {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 14px;
+    color: var(--dark-gray);
+    white-space: nowrap;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-about-link:hover span {
+    transform: translate(3px, -3px);
+    color: var(--dark-gray);
+}
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+  --btt-bg: #E8E4DF;
+  --btt-color: #77736E;
+  --btt-hover-bg: #D5CEC6;
+}
+
+.back-to-top:hover {
+  color: #59534E;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes drift {
+
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(90px, 40px) scale(1.12);
+    }
+}
+
+@keyframes drift-right {
+
+    to {
+        transform: translate(100px, 30px) scale(1.15);
+    }
+}
+
+@keyframes drift-up {
+
+    to {
+        transform: translate(-60px, -30px) scale(1.1);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- Hero ---------- */
+
+    .home-hero {
+        height: 250vh;
+        min-height: 1500px;
+    }
+
+    .home-wordmark {
+        font-size: 80px;
+        transform: translate(-50%, -220px);
+    }
+
+    .home-process {
+        width: calc(100% - 48px);
+        top: 40%;
+    }
+
+    .process-label {
+        font-size: 20px;
+    }
+
+    .home-process .process-dash {
+        margin: 0 10px;
+    }
+
+    .home-process.spread {
+        bottom: 30px;
+    }
+
+    .home-process.spread
+    .home-process-item:nth-of-type(1) {
+        transform: translateX(-140px);
+    }
+
+    .home-process.spread
+    .home-process-item:nth-of-type(2) {
+        transform: translateX(0);
+    }
+
+    .home-process.spread
+    .home-process-item:nth-of-type(3) {
+        transform: translateX(140px);
+    }
+
+    .home-process-item p {
+        width: 200px;
+        font-size: 14px;
+    }
+
+
+    /* ---------- Selected Work ---------- */
+
+   .selected-work {
+        padding: 100px 0 120px;
+    }
+
+    .selected-work .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .selected-work-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .selected-project-visual {
+        height: 280px;
+    }
+
+
+    /* ---------- Current Apparel Flow ---------- */
+
+    .apparel-flow {
+        left: 40px;
+        right: 40px;
+        gap: 10px;
+    }
+
+    .apparel-node {
+        width: 108px;
+    }
+
+
+    /* ---------- Current Training Flow ---------- */
+
+    .training-system {
+        left: 40px;
+        right: 40px;
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .home-hero {
+        height: 230vh;
+        min-height: 1350px;
+    }
+
+    .home-glow-scene {
+        width: 140vw;
+        height: 700px;
+        transform: translateX(-50%) scale(0.75);
+    }
+
+    .home-wordmark {
+        font-size: 60px;
+        transform: translate(-50%, -230px);
+    }
+
+    .wordmark-comma {
+        margin-left: -5px;
+    }
+
+    .wordmark-hsuan {
+        margin-left: 7px;
+    }
+
+    .wordmark-hsuan.visible {
+        max-width: 140px;
+    }
+
+
+    /* ---------- Process ---------- */
+
+    .home-process {
+        width: calc(100% - 32px);
+        top: 35%;
+        gap: 7px;
+    }
+
+    .process-label {
+        font-size: 17px;
+    }
+
+    .home-process .process-dash {
+        margin: 0 5px;
+        font-size: 17px;
+    }
+
+    .home-process.spread {
+        bottom: 25px;
+    }
+
+    .home-process.spread
+    .home-process-item:nth-of-type(1) {
+        transform: translateX(-70px);
+    }
+
+    .home-process.spread
+    .home-process-item:nth-of-type(2) {
+        transform: translateX(0);
+    }
+
+    .home-process.spread
+    .home-process-item:nth-of-type(3) {
+        transform: translateX(70px);
+    }
+
+    .home-process-item p {
+        width: 125px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       SELECTED WORK
+    ===================================================== */
+
+    .selected-work {
+        width: var(--page-width-mobile);
+        padding: 80px 0 100px;
+    }
+
+    .selected-work .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .selected-work-grid {
+        gap: 24px;
+    }
+
+    .selected-project-visual {
+        height: 250px;
+    }
+
+
+    /* ---------- Current Apparel Flow ---------- */
+
+    .apparel-flow {
+        left: 16px;
+        right: 16px;
+        gap: 6px;
+    }
+
+    .apparel-node {
+        width: 82px;
+        min-height: 64px;
+        padding: 9px 6px;
+    }
+
+    .apparel-node span {
+        font-size: 12px;
+    }
+
+    .apparel-node small {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+
+    .apparel-arrow {
+        font-size: 15px;
+    }
+
+    .apparel-before,
+    .apparel-after {
+        top: 18px;
+        gap: 5px;
+        font-size: 9px;
+    }
+
+    .apparel-before {
+        left: 16px;
+    }
+
+    .apparel-after {
+        right: 16px;
+    }
+
+
+    /* ---------- Current Training Flow ---------- */
+
+    .training-system {
+        left: 16px;
+        right: 16px;
+        gap: 7px;
+    }
+
+    .training-node {
+        min-height: 64px;
+        padding: 9px 5px;
+    }
+
+    .training-node span {
+        font-size: 11px;
+    }
+
+    .training-node small {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+
+    .training-center {
+        min-height: 88px;
+        padding: 9px 5px;
+    }
+
+    .training-center-title {
+        font-size: 13px;
+    }
+
+    .training-center-line {
+        width: 24px;
+        margin: 7px 0;
+    }
+
+    .training-center small {
+        font-size: 7px;
+    }
+
+    .training-paper,
+    .training-digital {
+        bottom: 18px;
+        gap: 5px;
+        font-size: 9px;
+    }
+
+    .training-paper {
+        left: 16px;
+    }
+
+    .training-digital {
+        right: 16px;
+    }
+
+
+    /* ---------- Shared Icons ---------- */
+
+    .apparel-source img,
+    .apparel-channel > img,
+    .apparel-cart-flow > img,
+    .apparel-extension img,
+    .hospital-paper img,
+    .hospital-digital img,
+    .hospital-paper-added img {
+        width: 50px;
+        height: 50px;
+
+        flex: 0 0 50px;
+
+        object-fit: contain;
+    }
+
+    .apparel-diagonal-arrow {
+        width: 16px;
+        flex-basis: 16px;
+        font-size: 19px;
+    }
+
+    .apparel-flow-arrow {
+        font-size: 18px;
+    }
+
+
+    /* ---------- Hospital ---------- */
+
+    .hospital-system-row {
+        width: 130px;
+        height: 42px;
+    }
+
+    .hospital-users {
+        gap: 32px;
+        margin-top: 24px;
+    }
+
+    .hospital-user,
+    .hospital-user img {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* =====================================================
+       CARD CONTENT
+    ===================================================== */
+
+    .selected-project-content {
+        padding: 24px;
+    }
+
+    .selected-project-content .project-card-type {
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+
+    .selected-project-name {
+        font-size: 14px;
+    }
+
+    .selected-project-title,
+    .selected-project-training .selected-project-name {
+        font-size: 21px;
+        line-height: 1.3;
+    }
+
+    .selected-project-content p {
+        margin-top: 14px;
+
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .selected-project-link {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+
+    /* ABOUT PREVIEW */
+   
+    .home-about-divider {
+        margin-bottom: 36px;
+    }
+
+     .home-about-link {
+        font-size: var(--fs-16);
+        line-height: 1.7;
+    }
+
+     .home-about-link span {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-ocean-wave {
+        animation: none;
+    }
+
+    .home-ocean-scene,
+    .home-glow-scene,
+    .wordmark-cean,
+    .wordmark-hsuan {
+        transition: none;
+    }
+   
+    .home-glow {
+        animation: none;
+    }
+
+    .selected-project-ohsuan
+    .ohsuan-identity {
+        transition: none;
+    }
+
+    .selected-project-ohsuan
+    .old-logo-ring {
+        animation: none;
+    }
+
+    .aizimov-concepts,
+    .aizimov-final-name {
+        transition: none;
+    }
+}

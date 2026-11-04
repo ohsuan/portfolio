@@ -1,0 +1,73 @@
+/* resume.css */
+/* ==========================================================
+    RESUME PAGE
+========================================================== */
+
+
+/* ==========================================================
+   PAGE BACKGROUND
+========================================================== */
+
+.resume-page {
+    background: linear-gradient(
+        to bottom,
+        var(--light-pink) 0%,
+        var(--light-pink) 35%,
+        var(--background) 100%
+    );
+}
+
+
+/* ==========================================================
+   RESUME CONTENT
+========================================================== */
+
+.resume-main {
+    position: relative;
+
+    width: min(45rem, 94vw);
+
+    margin: var(--space-l) auto var(--space-xl);
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ==========================================================
+   RESUME DOCUMENT
+========================================================== */
+
+.resume-container {
+    width: 90%;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-s);
+
+    box-shadow: var(--shadow-card);
+}
+
+
+/* ==========================================================
+   RESUME IMAGE
+========================================================== */
+
+.resume-image {
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+  --btt-bg: var(--light-pink);
+  --btt-color: #B27C7A;
+  --btt-hover-bg: var(--soft-pink);
+}
+
+.back-to-top:hover {
+  color: #8F5A58;
+}

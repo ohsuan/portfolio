@@ -1,0 +1,3012 @@
+/* apparel.css */
+/* =========================================================
+   APPAREL CASE PAGE
+========================================================= */
+
+
+/* =========================================================
+   CASE VARIABLES
+========================================================= */
+
+.case-page--apparel {
+  --case-accent: #FEF3E1;
+  --case-accent-strong: #E49832;
+  --case-accent-light: #FFFAF2;
+  --case-accent-soft: #F8E8D0;
+  --case-accent-dark: #A96012;
+}
+
+
+/* =========================================================
+   SHARED CASE STRUCTURE
+========================================================= */
+
+/* Section Heading */
+
+.case-page--apparel .case-section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem; /* 小標數字到文字之間的距離 */
+  margin-bottom: 2.5rem;
+}
+
+.case-page--apparel .case-section-heading .case-section-number {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.case-page--apparel .case-section-heading h2 {
+  margin: 0;
+}
+
+.case-page--apparel .case-section-number {
+  color: var(--gray);
+  font-family: var(--font-special);
+  font-size: var(--fs-24);
+  line-height: 1;
+}
+
+/* Section Typography */
+
+.case-page--apparel .case-section h2 {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.case-page--apparel .case-section h3 {
+  margin: 0 0 1rem;
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .case-section p {
+  font-size: 18px;
+  line-height: var(--lh-normal);
+}
+
+.case-page--apparel .case-lead {
+  margin: 0 0 1rem;
+  color: var(--dark-gray);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.case-page--apparel .case-hero {
+  padding: 7rem 0 6rem;
+  background:
+    linear-gradient(
+      to bottom,
+      #FCEBD0 0%,
+      rgba(254, 243, 225, .65) 48%,
+      var(--background) 100%
+    );
+}
+
+.case-page--apparel .case-eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--case-accent-strong);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  letter-spacing: .08em;
+}
+
+.case-page--apparel .case-hero h1 {
+  max-width: 58rem;
+  margin: 0;
+  font-size: 52px;
+  font-weight: var(--fw-bold);
+  line-height: 1.05;
+}
+
+.case-page--apparel .case-subtitle {
+  max-width: 50rem;
+  margin: 1.75rem 0 3rem;
+  color: var(--dark-gray);
+  font-size: var(--fs-20);
+  line-height: var(--lh-normal);
+}
+
+
+/* =========================================================
+   HERO — OVERVIEW
+========================================================= */
+
+/* Overview Spacing */
+
+.case-page--apparel .case-hero .apparel-overview {
+  margin-top: var(--space-l);
+}
+
+/* Role / Team */
+
+.case-page--apparel .apparel-overview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-l); /* meta之間的距離 */
+  margin-bottom: var(--space-m); /* meta到summary卡之間的距離1.5rem */
+}
+
+.case-page--apparel .overview-meta-item {
+  min-width: 0;
+}
+
+.case-page--apparel .overview-label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--gray);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+}
+
+.case-page--apparel .overview-meta-item p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: var(--fs-16);
+  line-height: var(--lh-normal);
+}
+
+/* Challenge / Solution */
+
+.case-page--apparel .apparel-overview-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-m);
+  margin-bottom: var(--space-l); /* Summary卡到contribution卡之間的距離2.5rem */
+}
+
+.case-page--apparel .overview-summary-item {
+  min-width: 0;
+  padding: var(--space-m);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+  background: var(--case-accent-light);
+}
+
+.case-page--apparel .overview-summary-item h2 {
+  margin: 0 0 var(--space-m);
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .overview-summary-item p {
+  margin: 0;
+  font-size: var(--fs-16);
+  line-height: var(--lh-relaxed);
+}
+
+/* Contribution */
+
+.case-page--apparel .apparel-contribution {
+  padding: var(--space-m);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+  background: transparent;
+}
+
+.case-page--apparel .apparel-contribution h2 {
+  margin: 0 0 var(--space-m);
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .apparel-contribution-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 12px; /* contribution卡裡每行之間的距離 */
+}
+
+.case-page--apparel .apparel-contribution-item {
+  min-width: 0;
+}
+
+.case-page--apparel .apparel-contribution-item h3 {
+  display: inline;
+  margin: 0;
+  color: var(--case-accent-dark);
+  font-family: var(--font-body);
+  font-size: var(--fs-16);
+  font-weight: 500;
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .apparel-contribution-item p {
+  display: inline;
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: var(--fs-16);
+  line-height: var(--lh-relaxed);
+}
+
+
+/* =========================================================
+   01 BUSINESS CONTEXT
+========================================================= */
+
+.case-page--apparel .business-context {
+  --business-warm-bg: var(--case-accent-light);
+  --business-warm-border: var(--case-accent-soft);
+}
+
+/* Intro */
+
+.case-page--apparel .business-context-intro {
+  margin-bottom: 1rem; /* 上文字到三張卡之間的距離 */
+}
+
+.case-page--apparel .business-context-intro p {
+  margin: 0 0 var(--space-m);
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .business-context-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* Customer Order Flow */
+
+.case-page--apparel .business-model {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.case-page--apparel .business-order-flow {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) auto
+    minmax(0, 1fr) auto
+    minmax(0, 1fr);
+  align-items: stretch;
+  gap: var(--space-m);
+}
+
+.case-page--apparel .business-flow-step {
+  min-width: 0;
+  padding: var(--space-m);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+  background: var(--background);
+}
+
+.case-page--apparel .business-flow-step--outcome {
+  border-color: var(--business-warm-border);
+  background: var(--business-warm-bg);
+}
+
+.case-page--apparel .business-flow-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-s);
+}
+
+.case-page--apparel .business-step-number {
+  flex-shrink: 0;
+  display: inline;
+  margin: 0;
+  color: var(--case-accent-dark);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
+  letter-spacing: .06em;
+  line-height: var(--lh-normal);
+}
+
+.case-page--apparel .business-flow-step h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-normal);
+}
+
+.case-page--apparel .business-flow-step p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: var(--fs-16);
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .business-flow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--case-accent-dark);
+  font-size: var(--fs-20);
+}
+
+/* Summary */
+
+.case-page--apparel .business-order-summary {
+  margin: 2rem 0 0; /* 三張卡到下文字之間的距離 */
+  color: var(--dark-gray);
+  font-size: 18px;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-tight);
+}
+
+/* Product Types */
+
+.case-page--apparel .business-product-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: 1rem; /* 上文字到商品類型之間的距離 */
+  margin-bottom: 2rem; /* 商品類型到fb截圖之間的距離 */
+}
+
+.case-page--apparel .business-product-types span {
+  display: inline-flex;
+  align-items: center;
+  padding: .4rem .75rem;
+  border: 1px solid var(--business-warm-border);
+  border-radius: 999px;
+  background: var(--business-warm-bg);
+  color: var(--dark-gray);
+  font-size: var(--fs-14);
+  line-height: var(--lh-normal);
+}
+
+/* Facebook Media */
+.case-page--apparel .business-facebook-media {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  /*border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);*/
+}
+
+.case-page--apparel .business-facebook-media img {
+  display: block;
+  width: 90%;
+  margin-inline: auto;
+  height: auto;
+  border-radius: var(--radius-m);
+}
+
+/* Order Processing */
+
+.case-page--apparel .business-operations {
+  margin-top: 2rem; /* fb截圖到下文字之間的距離 */
+}
+
+.case-page--apparel .business-operations-intro {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+.case-page--apparel .business-order-flow {
+  gap: 1rem;
+}
+   
+.case-page--apparel .business-flow-step h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-normal);
+}
+
+.case-page--apparel .business-flow-step p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: var(--fs-14);
+  line-height: var(--lh-relaxed);
+}
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+   
+.case-page--apparel .business-order-flow {
+  grid-template-columns: 1fr;
+}
+
+.case-page--apparel .business-flow-connector {
+  transform: rotate(90deg);
+}
+   
+}
+
+
+/* =========================================================
+   02 OPEN-ENDED REQUEST
+========================================================= */
+
+.case-page--apparel .case-section--brief {
+  background: var(--case-accent-light);
+}
+
+/* Request Quote */
+
+.case-page--apparel .apparel-brief {
+  margin: 1rem 0 2rem; /* 上文字到問句之間的距離 */ /* 問句到下文字之間的距離 */
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--case-accent-strong);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: var(--fs-24);
+  line-height: var(--lh-tight);
+}
+
+/* Brief Copy */
+
+.case-page--apparel .case-brief-copy p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .case-brief-copy p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 650px) {
+.case-page--apparel .apparel-brief {
+  font-size: var(--fs-20);
+}
+}
+
+/* =========================================================
+   03 MAPPING WORKFLOW
+========================================================= */
+
+/* Workflow Comparison */
+
+.case-page--apparel .workflow-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.case-page--apparel .workflow-column {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+}
+
+/* Workflow Headings */
+
+.case-page--apparel .workflow-heading {
+  margin: 0 0 .4rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: 600;
+  text-align: center;
+}
+
+.case-page--apparel .workflow-subtitle {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--gray);
+  font-size: var(--fs-14);
+  text-align: center;
+}
+
+/* Workflow Steps */
+
+.case-page--apparel .workflow-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.case-page--apparel .workflow-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: .75rem .65rem;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-s);
+  text-align: center;
+  font-size: var(--fs-16);
+  line-height: 1.5;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* Manual Order Entry */
+
+.case-page--apparel .workflow-step--problem {
+  background: var(--case-accent);
+  border: 1px solid var(--case-accent);
+}
+
+/* Arrows and Spacing */
+
+.case-page--apparel .workflow-arrow {
+  padding: .4rem 0;
+  color: var(--gray);
+  line-height: 1;
+}
+
+/* Workflow Analysis */
+
+.case-page--apparel .workflow-analysis {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
+.case-page--apparel .workflow-analysis > p {
+  font-size: 18px;
+  color: var(--dark-gray);
+  line-height: 1.8;
+  text-align: left;
+}
+
+.case-page--apparel .workflow-conclusion {
+  color: var(--dark-gray);
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Information source map */
+
+.case-page--apparel .information-map {
+  width: 100%;
+  max-width: 860px;
+  margin: 2rem auto;
+}
+
+.case-page--apparel .information-source-map {
+  width: 100%;
+}
+
+.case-page--apparel .information-sources {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 0;
+}
+
+.case-page--apparel .information-source {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  max-width: 100%;
+  padding: 0.5rem 1.25rem;
+
+  border: 1px solid var(--light-gray);
+  border-radius: 999px;
+  background: var(--background);
+
+  text-align: center;
+  font-size: var(--fs-16);
+  font-weight: var(--fw-regular);
+  white-space: normal;
+}
+
+.case-page--apparel .information-connectors {
+  display: block;
+  width: 100%;
+  height: 4.75rem;
+  overflow: visible;
+}
+
+.case-page--apparel .information-connectors path {
+  fill: none;
+  stroke: var(--case-accent-strong);
+  stroke-opacity: 0.6;
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.case-page--apparel .workflow-impact-grid { /*控制大卡*/
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px; /*大卡的寬度*/
+  margin-inline: auto; /*大卡左右置中*/
+
+  padding: 1rem; /*工作卡跟大卡邊框上下左右之間的距離*/
+  border-radius: var(--radius-l);
+  background: var(--case-accent-light);
+}
+
+.case-page--apparel .workflow-impact-cards { /*控制六張卡整體*/
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.case-page--apparel .workflow-impact-row { /*控制六張卡格式*/
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem; /*工作卡左右之間的距離*/
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.case-page--apparel .workflow-impact-row:not(.workflow-impact-row--offset) { /*控制六張卡上排*/
+  transform: translateX(-8%);
+  margin-bottom: .75rem; /*工作卡上下兩排之間的距離*/
+}
+
+.case-page--apparel .workflow-impact-row--offset { /*控制六張卡下排*/
+  transform: translateX(8%);
+  width: 100%;
+}
+
+.case-page--apparel .workflow-impact-item { /*控制六張卡*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 100%; 
+  aspect-ratio: 1 / 1;
+  padding: 0.5rem;
+   
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+  background: var(--background);
+   
+  text-align: center;
+  font-size: var(--fs-14);
+  color: var(--dark-gray);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .case-page--apparel .workflow-comparison {
+    gap: 1.5rem;
+  }
+
+  .case-page--apparel .workflow-column {
+    padding: 1.25rem;
+  }
+
+  .case-page--apparel .workflow-impact-grid {
+    padding: 1.25rem;
+  }
+
+  .case-page--apparel .workflow-impact-cards { /*控制六張卡整體*/
+  max-width: 480px;
+  margin-inline: auto;
+  }
+
+  .case-page--apparel .workflow-impact-row { /*控制六張卡格式*/
+  gap: .75rem; /*工作卡左右之間的距離*/
+  max-width: 480px;
+  }
+
+  .case-page--apparel .workflow-impact-row:not(.workflow-impact-row--offset) {
+    margin-bottom: 0.5rem; /*工作卡上下兩排之間的距離*/
+  }
+
+}
+
+@media (max-width: 650px) {
+  .case-page--apparel .workflow-comparison {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .case-page--apparel .workflow-column {
+    padding: 1.25rem;
+  }
+
+
+   .case-page--apparel .information-sources {
+    gap: .5rem;
+  }
+
+  .case-page--apparel .information-source {
+    padding: .5rem .25rem;
+    font-size: var(--fs-14);
+    overflow-wrap: anywhere;
+  }
+
+  .case-page--apparel .information-connectors {
+    height: 3.5rem;
+  }
+
+  .case-page--apparel .workflow-impact-grid {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .case-page--apparel .workflow-impact-cards {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+
+  .case-page--apparel .workflow-impact-row { /*控制六張卡格式*/
+  gap: .5rem; /*工作卡左右之間的距離*/
+  max-width: 340px;
+  }
+
+  .case-page--apparel .workflow-impact-row:not(.workflow-impact-row--offset) {
+    transform: translateX(-8%);
+    margin-bottom: 0.5rem; /*工作卡上下兩排之間的距離*/
+  }
+
+  .case-page--apparel .workflow-impact-row--offset {
+    transform: translateX(8%);
+  }
+
+  .case-page--apparel .workflow-impact-item {
+    padding: .35rem;
+    font-size: var(--fs-12);
+  }
+}
+
+
+
+
+/* =========================================================
+   04 — EXPLORING THREE SOLUTION DIRECTIONS
+========================================================= */
+
+/* SECTION */
+
+.case-page--apparel .solution-directions-section {
+    background: var(--case-accent-light);
+}
+
+.case-page--apparel .solution-directions-intro {
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.case-page--apparel .solution-directions-conclusion {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    color: var(--dark-gray);
+}
+
+
+/* =========================================================
+   SOLUTION CARDS
+========================================================= */
+
+.case-page--apparel .solution-directions-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem; /*三張大卡上下之間的距離*/
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.case-page--apparel .solution-direction-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.75rem 2rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-l);
+    background: var(--background);
+}
+
+
+/* CARD HEADER */
+
+.case-page--apparel .solution-direction-header {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.2rem; /* option跟文字之間的距離 */
+    margin-bottom: 1rem;
+}
+
+.case-page--apparel .solution-direction-number {
+    flex: 0 0 auto;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+    color: var(--case-accent-strong);
+    letter-spacing: 0;
+    line-height: 1.3;
+}
+
+.case-page--apparel .solution-direction-header h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-bold);
+    line-height: 1.3;
+}
+
+
+/* CARD INTRO */
+
+.case-page--apparel .solution-direction-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.case-page--apparel .solution-direction-copy p {
+    margin: 0;
+    color: var(--dark-gray);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.case-page--apparel .solution-direction-copy--intro {
+    margin-bottom: 1rem; /*上文字到flow之間的距離*/
+    color: var(--dark-gray);
+}
+
+
+/* =========================================================
+   SHARED FLOW STYLES
+========================================================= */
+
+.case-page--apparel .solution-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem; /* option flow chip跟箭頭之間的距離 */
+    width: 100%;
+    max-width: 54rem;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0 0 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-m);
+    background: var(--case-accent-light);
+}
+
+.case-page--apparel .solution-flow-node {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 2.5rem;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 999px;
+    background: var(--background);
+    color: var(--text-color);
+    text-align: center;
+    font-size: var(--fs-14);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.case-page--apparel .solution-flow-node--focus {
+    border: 1.5px solid var(--case-accent-strong);
+    background: var(--case-accent);
+    color: #CD892D;
+    font-weight: 400;
+}
+
+.case-page--apparel .solution-flow-arrow {
+    flex: 0 0 auto;
+    color: var(--gray);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FLOW + ANALYSIS LAYOUT
+========================================================= */
+
+.case-page--apparel .solution-direction-body {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: stretch;
+    gap: 2rem;
+}
+
+
+/* VERTICAL FLOWS — OPTIONS A & C */
+
+.case-page--apparel .solution-flow--vertical {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-radius: var(--radius-m);
+    background: var(--case-accent-light);
+}
+
+.case-page--apparel .solution-flow--vertical .solution-flow-node {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.case-page--apparel .solution-flow--vertical .solution-flow-arrow {
+    align-self: center;
+    flex: 0 0 auto;
+    color: var(--gray);
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   OPTION B — CENTRALIZED DATA LAYER
+========================================================= */
+
+/* Main flow container */
+
+.case-page--apparel .solution-flow--centralized {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;  /* optionB chip跟箭頭之間的距離 */
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    border-radius: var(--radius-m);
+    background: var(--case-accent-light);
+}
+
+/* Two parallel paths above the shared data layer */
+
+.case-page--apparel .solution-flow-centralized-paths {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 1.25rem;
+    min-width: 0;
+}
+
+/* Each vertical path */
+
+.case-page--apparel .solution-flow-centralized-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem; /* web chip跟伸縮箭頭之間的距離 */
+    min-width: 0;
+}
+
+.case-page--apparel .solution-flow-centralized-column > .solution-flow-node {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Standard downward arrows in the left path */
+
+.case-page--apparel .solution-flow-centralized-column > .solution-flow-arrow {
+    align-self: center;
+    flex: 0 0 auto;
+    color: var(--gray);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+/* Long SVG arrow: Website to the shared data layer */
+
+.case-page--apparel .solution-flow-website-connector {
+    display: block;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 3rem;
+    min-height: 3rem;
+    overflow: visible;
+}
+
+.case-page--apparel .solution-flow-website-connector path {
+    fill: none;
+    stroke: var(--gray);
+    stroke-width: 1.15; /* 伸縮箭頭線條粗度 */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+/* One shared data layer spanning both paths */
+
+.case-page--apparel .solution-flow-node--data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    min-height: 3.5rem;
+    margin-top: 0.25rem;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    border-radius: var(--radius-m);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   BENEFITS, LIMITATIONS & CHALLENGES
+========================================================= */
+
+.case-page--apparel .solution-direction-analysis {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem; /* 三分析之間的距離 */
+    min-width: 0;
+}
+
+.case-page--apparel .solution-direction-analysis-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* 三分析中每點之間的距離 */
+    min-width: 0;
+}
+
+.case-page--apparel .solution-direction-analysis-group h4 {
+    margin: 0;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-bold);
+    line-height: 1.4;
+}
+
+/* Potential Benefit */
+
+.case-page--apparel
+.solution-direction-analysis-group:nth-child(1) h4 {
+    color: #34B982;
+}
+
+/* Limitation */
+
+.case-page--apparel
+.solution-direction-analysis-group:nth-child(2) h4 {
+    color: #AEAEAE;
+}
+
+/* Key Challenges */
+
+.case-page--apparel
+.solution-direction-analysis-group:nth-child(3) h4 {
+    color: var(--case-accent-strong);
+}
+
+.case-page--apparel .solution-direction-analysis-group ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.case-page--apparel .solution-direction-analysis-group li {
+    padding-left: 0.1rem;
+    color: var(--dark-gray);
+    font-size: var(--fs-14);
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .case-page--apparel .solution-direction-card {
+        padding: 1.5rem;
+    }
+
+    .case-page--apparel .solution-flow {
+        padding: 1.25rem 1rem;
+    }
+
+    .case-page--apparel .solution-flow-node {
+        padding: 0.5rem 0.75rem;
+        font-size: var(--fs-12);
+    }
+
+    .case-page--apparel .solution-flow--vertical {
+        padding: 1.25rem 1rem;
+    }
+
+    .case-page--apparel .solution-flow--centralized {
+        padding: 1rem;
+    }
+
+    .case-page--apparel .solution-flow-centralized-paths {
+        gap: 0.75rem;
+    }
+
+    .case-page--apparel .solution-flow-centralized-column {
+        gap: 0.75rem;
+    }
+
+    .case-page--apparel .solution-flow-centralized-column > .solution-flow-node {
+        padding: 0.5rem 0.6rem;
+        font-size: var(--fs-12);
+    }
+
+    .case-page--apparel .solution-flow-node--data {
+        padding: 0.65rem;
+        font-size: var(--fs-12);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+    .case-page--apparel .solution-direction-card {
+        padding: 1.25rem;
+    }
+
+    .case-page--apparel .solution-direction-body {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .case-page--apparel .solution-flow {
+        padding: 1rem 0.5rem;
+    }
+
+    .case-page--apparel .solution-flow--vertical {
+        padding: 1rem;
+    }
+
+    .case-page--apparel .solution-flow--centralized {
+        padding: 0.75rem;
+    }
+
+    .case-page--apparel .solution-flow-centralized-paths {
+        gap: 0.5rem;
+    }
+
+    .case-page--apparel .solution-flow-centralized-column {
+        gap: 0.75rem;
+    }
+
+    .case-page--apparel .solution-flow-centralized-column > .solution-flow-node {
+        padding: 0.45rem 0.35rem;
+    }
+
+    .case-page--apparel .solution-flow-node--data {
+        padding: 0.65rem 0.4rem;
+    }
+}
+
+
+
+
+
+
+/* ==========================================================
+   05 — WHY WE DECIDED OPTION C
+========================================================== */
+
+.approach-section {
+  --rating-favorable: #34B982;
+  --rating-moderate: #D9D9D9;
+  --rating-unfavorable: #E49832;
+}
+
+.approach-section .case-section__intro {
+  margin-top: 1.5rem;
+  color: var(--dark-gray);
+  font-size: 18px;
+}
+
+.approach-section .case-section__intro p + p {
+  margin-top: 1.5rem;
+}
+
+
+/* ==========================================================
+   COMPARISON TABLE
+========================================================== */
+
+.approach-section .comparison-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--case-accent-light);
+  border-radius: var(--radius-l);
+  background: var(--case-accent-light);
+}
+
+.approach-section .approach-comparison {
+  width: 90%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 1rem auto;
+}
+
+/* Equal-width rating columns */
+.approach-section .comparison-table {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: left;
+  font-size: var(--fs-16);
+}
+
+
+.approach-section .comparison-table th:first-child,
+.approach-section .comparison-table td:first-child {
+  width: 40%;
+}
+
+.approach-section .comparison-table th:nth-child(2),
+.approach-section .comparison-table td:nth-child(2),
+.approach-section .comparison-table th:nth-child(3),
+.approach-section .comparison-table td:nth-child(3),
+.approach-section .comparison-table th:nth-child(4),
+.approach-section .comparison-table td:nth-child(4) {
+  width: 20%;
+}
+
+.approach-section .comparison-table th,
+.approach-section .comparison-table td {
+  min-width: 0;
+  padding: 1rem 0.75rem; /* .75ABC欄之間的距離 */
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.approach-section .comparison-table thead th {
+  font-weight: var(--fw-bold);
+  border-bottom: none;
+}
+
+
+.approach-section .comparison-table tbody th {
+  font-weight: 400;
+}
+
+.approach-section .comparison-table tbody tr:last-child th,
+.approach-section .comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.approach-section .comparison-table th:not(:first-child),
+.approach-section .comparison-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+
+
+
+/* ==========================================================
+   RATINGS
+========================================================== */
+
+.approach-section .rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  white-space: normal;
+  min-width: 0;
+}
+
+.approach-section .rating-label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.approach-section .rating-dot {
+  display: inline-block;
+  flex: 0 0 0.625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+}
+
+.approach-section .rating-dots {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.approach-section .favorable {
+  background-color: var(--rating-favorable);
+}
+
+.approach-section .moderate {
+  background-color: var(--rating-moderate);
+}
+
+.approach-section .unfavorable {
+  background-color: var(--rating-unfavorable);
+}
+
+
+/* ==========================================================
+   OVERLAPPING DOTS
+========================================================== */
+
+.approach-section .rating-dots {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.approach-section .rating-dots .rating-dot + .rating-dot {
+  position: relative;
+  z-index: 1;
+  margin-left: -0.3125rem;
+}
+
+
+/* ==========================================================
+   DIRECTION INDICATORS
+========================================================== */
+
+.approach-section .direction {
+  display: inline-block;
+  margin-left: 0.125rem;
+  color: var(--dark-gray);
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+
+/* ==========================================================
+   LEGEND
+========================================================== */
+
+.approach-section .comparison-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 0.875rem 1.5rem;
+  margin-top: 1.25rem; /* 圖例到表格之間的距離 */
+  border-top: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: var(--fs-14);
+  color: var(--dark-gray);
+}
+
+.approach-section .legend-colors,
+.approach-section .legend-directions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.875rem 1.125rem;
+}
+
+.approach-section .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  white-space: nowrap;
+}
+
+.approach-section .legend-directions span {
+  white-space: nowrap;
+}
+
+.approach-section .legend-directions strong {
+  margin-right: 0.2rem;
+  color: var(--text-color, #222);
+  font-size: 0.875rem;
+}
+
+
+/* ==========================================================
+   DECISION
+========================================================== */
+
+.approach-section .approach-section__decision {
+  margin-top: 2rem;
+  max-width: 100%;
+  color: var(--dark-gray);
+  font-size: 18px;
+}
+
+.approach-section .approach-section__decision p {
+  margin: 0;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+@media (max-width: 900px) {
+   .approach-section .approach-comparison {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+   }
+
+   .approach-section .comparison-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+   
+   .approach-section .comparison-table {
+     width: 100%;
+     min-width: 0;
+     table-layout: fixed;
+     font-size: var(--fs-14);
+   }
+
+}
+
+
+@media (max-width: 650px) {
+  .approach-section .comparison-table {
+    font-size: var(--fs-12);
+  }
+
+  .approach-section .comparison-table th,
+  .approach-section .comparison-table td {
+    padding: 0.75rem 0.375rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+   .approach-section .rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    white-space: normal;
+    min-width: 0;
+  }
+
+   .approach-section .rating-dots {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+
+  .approach-section .comparison-legend {
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: var(--fs-12);
+  }
+
+  .approach-section .legend-colors,
+  .approach-section .legend-directions {
+    gap: 0.75rem 1rem;
+  }
+}
+
+
+
+/* =========================================================
+   06 — DESIGNING THE NEW ORDERING WORKFLOW
+========================================================= */
+
+.case-page--apparel .case-section--build {
+    background: var(--case-accent-light);
+}
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.case-page--apparel .build-intro {
+  margin-bottom: 1rem;
+}
+
+.case-page--apparel .build-intro p {
+  margin: 0 0 1.5rem;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .build-intro p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   WORKFLOW
+========================================================= */
+
+.case-page--apparel .build-workflow {
+  margin-bottom: 2rem;
+}
+
+
+.case-page--apparel .build-workflow {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) auto
+    minmax(0, 1fr) auto
+    minmax(0, 1fr) auto
+    minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.case-page--apparel .product-flow-step {
+  min-width: 0;
+  padding: var(--space-m);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+  background: var(--background);
+}
+
+.case-page--apparel .product-flow-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-s);
+}
+
+.case-page--apparel .product-flow-step h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-normal);
+}
+
+.case-page--apparel .product-flow-step p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: var(--fs-14);
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .product-flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--case-accent-dark);
+  font-size: var(--fs-20);
+}
+
+
+/* =========================================================
+   FIGMA INTERFACE DESIGN
+========================================================= */
+
+.case-page--apparel .build-interface {
+  margin-bottom: 2rem;
+}
+
+
+/* Interface Introduction */
+
+.case-page--apparel .build-interface-intro {
+  margin-bottom: 1rem;
+}
+
+.case-page--apparel .build-interface-intro h3 {
+  margin: 0 0 1rem;
+}
+
+.case-page--apparel .build-interface-intro p {
+  margin: 0 0 1.5rem;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+}
+
+
+/* Gallery */
+
+.case-page--apparel .ui-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+
+  align-items: start;
+  max-width: 900px;
+  margin-inline: auto
+}
+
+.case-page--apparel .ui-context {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+
+/* Composite Mockup */
+
+.case-page--apparel .ui-card--context {
+  width: 100%;
+  margin: 0;
+}
+
+.case-page--apparel .ui-card--context .ui-card-image {
+  padding: 0;
+}
+
+
+/* Mockup Caption */
+
+.case-page--apparel .ui-card-caption--context {
+  padding-top: .25rem;
+}
+
+.case-page--apparel .ui-card-caption--context p {
+  color: var(--dark-gray);
+  font-size: var(--fs-12);
+  text-align: center;
+}
+
+
+/* Quick Access + Group Setup */
+
+.case-page--apparel .ui-context-captions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  margin-top: 1rem;
+}
+
+.case-page--apparel .ui-context-caption {
+  min-width: 0;
+}
+
+.case-page--apparel .ui-context-caption h4 {
+  margin: 0 0 .5rem;
+
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .ui-context-caption p {
+  margin: 0;
+
+  color: var(--dark-gray);
+  font-size: var(--fs-14);
+  line-height: var(--lh-relaxed);
+  padding-left: .4rem;
+}
+
+
+/* Individual UI Card */
+
+.case-page--apparel .ui-card {
+  min-width: 0;
+  margin: 0;
+}
+
+
+/* Image Container */
+
+.case-page--apparel .ui-card-image {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+  background: var(--case-accent-light);*/
+}
+
+
+/* UI Screenshot */
+
+.case-page--apparel .ui-card-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  object-position: center;
+  border-radius: var(--radius-m);
+}
+
+/* Image Caption */
+
+.case-page--apparel .ui-card-caption h4 {
+  margin: 0 0 .5rem;
+
+  font-family: var(--font-display);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .ui-card-caption p {
+  margin: 0;
+  padding-top: .25rem;
+  padding-left: .4rem;
+  color: var(--dark-gray);
+  font-size: var(--fs-14);
+  line-height: var(--lh-relaxed);
+}
+
+
+/* =========================================================
+   GROUP DETAIL — IMAGE ANNOTATIONS
+========================================================= */
+
+.case-page--apparel .ui-card-image--annotated {
+  overflow: hidden;
+}
+
+.case-page--apparel .ui-card-image--annotated img {
+  position: relative;
+  z-index: 0;
+}
+
+/* Annotation Legend */
+
+.case-page--apparel .annotation-legend {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .4rem;
+
+  margin: .25rem 0 0;
+  padding-left: .4rem;
+
+  list-style: none;
+}
+
+.case-page--apparel .annotation-legend li {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+
+  color: var(--dark-gray);
+  font-size: var(--fs-14);
+  line-height: var(--lh-normal);
+}
+
+
+/* Legend Number */
+
+.case-page--apparel .annotation-legend-number {
+  flex: 0 0 1.75rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1.75rem;
+  height: 1.75rem;
+
+  border-radius: 50%;
+
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+}
+
+.case-page--apparel .annotation-legend-number--comments {
+  background: #C98282;
+}
+
+.case-page--apparel .annotation-legend-number--ai {
+  background: #7B91AA;
+}
+
+.case-page--apparel .annotation-legend-number--review {
+  background: #829B83;
+}
+
+
+/* =========================================================
+   IMPLEMENTATION
+========================================================= */
+
+.case-page--apparel .build-implementation h3 {
+  margin: 0 0 1.25rem;
+}
+
+.case-page--apparel .build-implementation p {
+  margin: 0 0 1rem;
+
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .build-implementation p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Workflow */
+.case-page--apparel .build-workflow {
+  gap: .5rem;
+}
+   
+.case-page--apparel .product-flow-step {
+  padding: .75rem;
+}
+
+.case-page--apparel .product-flow-step h3 {
+  font-size: 18px;
+}
+
+.case-page--apparel .product-flow-arrow {
+  font-size: var(--fs-16);
+}
+  /* Gallery */
+
+  .case-page--apparel .ui-gallery {
+    gap: 2rem 1rem;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* Workflow */
+
+.case-page--apparel .build-workflow {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+   
+.case-page--apparel .product-flow-arrow {
+  transform: rotate(90deg);
+  font-size: var(--fs-20);
+}
+
+  /* Interface Gallery */
+
+  .case-page--apparel .build-interface {
+    margin-bottom: 2rem;
+  }
+
+  .case-page--apparel .ui-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    width: 80%;
+  }
+
+/* Extension in Context */
+.case-page--apparel .ui-context-captions {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+
+  margin-top: 1.25rem;
+}
+
+  .case-page--apparel .ui-card-image--compact {
+    min-height: 0;
+  }
+
+  .case-page--apparel .ui-card-image--compact img {
+    max-width: 100%;
+  }
+
+  /* Annotation Legend */
+
+  .case-page--apparel .annotation-legend {
+    gap: .625rem;
+  }
+
+.case-page--apparel .annotation-legend li {
+  font-size: var(--fs-16);
+}
+
+}
+
+
+/* =========================================================
+   07 — What the New Workflow Changes
+========================================================= */
+
+/* =========================================================
+   BEFORE / AFTER WORKFLOW
+========================================================= */
+
+.case-page--apparel .impact-comparison {
+  width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+}
+
+/* ==========================================================
+   Impact: Mobile Tabs
+========================================================== */
+
+.case-page--apparel .impact-tabs {
+  display: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--light-gray); /* tab外框 */
+  border-radius: 12px;
+}
+
+.case-page--apparel .impact-tab {
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--dark-gray);
+  font: inherit;
+  font-size: var(--fs-14);
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.case-page--apparel .impact-tab.is-active {
+  background: var(--case-accent-strong); /* 選取中的tab底色 */
+  color: #FFFFFF; /* 選取中的tab文字 */
+}
+
+.case-page--apparel .impact-tab:hover:not(.is-active) {
+  background: var(--case-accent-soft); /* hover中的tab底色 */
+  color: var(--case-accent-dark); /* hover中的tab文字 */
+}
+
+.case-page--apparel .impact-tab:focus-visible {
+  outline: 2px solid var(--case-accent-strong);
+  outline-offset: 2px;
+}
+
+
+
+/* ---------------------------------------------------------
+   Desktop Before / After Panels
+--------------------------------------------------------- */
+
+
+
+/* ==========================================================
+   Impact: Before / After flow
+========================================================== */
+
+.case-page--apparel .impact-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 0; /* before after底色到Downstream Operations之間的距離*/
+}
+
+.case-page--apparel .impact-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: var(--radius-m);
+}
+
+.case-page--apparel .impact-panel--before {
+  background: #EDEDED; /* Before底色 */
+}
+
+.case-page--apparel .impact-panel--after {
+  background: var(--case-accent-light); /* After底色 */
+}
+
+.case-page--apparel .impact-panel__content {
+  flex: 1;
+  padding: 1.5rem;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.case-page--apparel .impact-panel h3 {
+  margin: 0 0 20px;
+}
+
+
+/* ==========================================================
+   Before: two parallel flows
+========================================================== */
+
+.case-page--apparel .impact-before-flows {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.case-page--apparel .impact-before-flow,
+.case-page--apparel .impact-after-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+
+
+/* ==========================================================
+   Flow nodes
+========================================================== */
+
+.case-page--apparel .impact-flow-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 8px;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   Vertical arrows and floating annotations
+========================================================== */
+
+.case-page--apparel .impact-flow-arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 42px;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.case-page--apparel .impact-flow-arrow::before {
+  content: "↓";
+  display: block;
+  line-height: 1;
+}
+
+.case-page--apparel .impact-flow-arrow__note {
+  position: absolute;
+  left: calc(50% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--dark-gray);
+  font-size: 10px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+
+/* ==========================================================
+   Order and customer records
+========================================================== */
+
+.case-page--apparel .impact-flow-records {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.case-page--apparel .impact-flow-records > div {
+  padding: 10px 8px;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  background: var(--case-accent-light);
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   After: centered main flow
+========================================================== */
+
+.case-page--apparel .impact-panel--after .impact-after-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.case-page--apparel .impact-panel--after
+.impact-after-flow > .impact-flow-node,
+.case-page--apparel .impact-panel--after
+.impact-after-flow > .impact-flow-arrow,
+.case-page--apparel .impact-panel--after
+.impact-after-flow > .impact-flow-records {
+  width: 220px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Highlight Official Website */
+
+.case-page--apparel .impact-panel--after
+.impact-flow-node--website {
+  border-color: var(--case-accent-strong);
+  background: var(--case-accent);
+}
+
+/* Keep Official Website centered */
+
+.case-page--apparel .impact-panel--after
+.impact-after-website-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.case-page--apparel .impact-panel--after
+.impact-after-website-row > .impact-flow-node--website {
+  flex: 0 0 220px;
+  width: 220px;
+  max-width: 220px;
+  box-sizing: border-box;
+}
+
+/* Website Customer: floating label with left-pointing arrow */
+
+.case-page--apparel .impact-customer-sync {
+  position: absolute;
+  left: calc(50% + 118px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  width: max-content;
+  max-width: none;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.35;
+  background: var(--case-accent-light);
+  background: transparent;
+  text-align: center;
+}
+
+.case-page--apparel .impact-customer-sync__arrow {
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 1;
+  position: relative;
+  transform: translateY(-1px);
+}
+
+.case-page--apparel .impact-customer-sync__note {
+  position: relative;
+  z-index: 1;
+  padding: 3px 2px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* Centralized records */
+
+.case-page--apparel
+.impact-flow-records--centralized > div {
+  border-color: var(--case-accent-strong);
+  background: var(--case-accent);
+}
+
+
+/* ==========================================================
+   External connectors
+========================================================== */
+
+.case-page--apparel .impact-connectors {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.case-page--apparel .impact-connector {
+  position: absolute;
+  display: block;
+  width: 0;
+  box-sizing: border-box;
+}
+
+.case-page--apparel .impact-connector--facebook,
+.case-page--apparel .impact-connector--website {
+  border-left: 1px dashed var(--dark-gray); /* before兩虛線粗細 */
+}
+
+.case-page--apparel .impact-connector--centralized {
+  border-left: 2px solid var(--case-accent-strong); /* after實線粗細 */
+}
+
+.case-page--apparel .impact-connector--centralized::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 7px solid var(--case-accent-strong); /* after實線箭頭 */
+}
+
+/* ==========================================================
+   Impact: Connector badges
+========================================================== */
+
+.case-page--apparel .impact-badge-position {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: center;
+  height: 5rem;
+  position: relative;
+  z-index: 5;
+  pointer-events: none;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.case-page--apparel .impact-connector-badge {
+  justify-self: center;
+  align-self: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.case-page--apparel .impact-connector-badge--before {
+  padding-left: 14px;
+  padding-right: 14px;
+  background: #FFFFFF;
+  color: var(--dark-gray);
+}
+
+.case-page--apparel .impact-connector-badge--after {
+  background: #FFFFFF;
+  color: var(--case-accent-dark);
+}
+
+/* Badge markers */
+
+.case-page--apparel .impact-badge-mark {
+  color: var(--case-accent-strong);
+  font-weight: var(--fw-bold);
+  font-size: 1.15em;
+  letter-spacing: -0.08em;
+}
+
+.case-page--apparel .impact-badge-dot {
+  display: inline-block;
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34B982;
+}
+
+/* ==========================================================
+   Downstream Operations
+========================================================== */
+
+.case-page--apparel .impact-downstream {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid var(--light-gray);
+  margin-top: 0;
+  border-radius: 16px;
+  background: var(--workflow-surface);
+  text-align: center;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.case-page--apparel .impact-downstream__header {
+  margin-bottom: 1.25rem;
+}
+
+.case-page--apparel .impact-downstream__header h3 {
+  margin: 0 0 0.5rem;
+  font-size: var(--fs-20);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .impact-downstream__header p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: var(--fs-14);
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .impact-operations {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.case-page--apparel .impact-operation {
+  display: flex;
+  min-width: 0;
+  min-height: 54px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  background: #FFFFFF;
+  font-size: var(--fs-14);
+  line-height: var(--lh-normal);
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   KEY STRUCTURAL SHIFTS
+========================================================= */
+
+.case-page--apparel .structural-shifts,
+.case-page--apparel .workflow-business-impact {
+  min-width: 0;
+}
+
+.case-page--apparel .subsection-heading {
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+
+.case-page--apparel .subsection-heading h3 {
+  margin: 0 0 0.625rem;
+  font-size: var(--fs-20);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .subsection-heading p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+}
+
+
+/* Shifts table */
+
+.case-page--apparel .shifts-table-wrap {
+  width: 90%;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 0;
+  background: var(--case-accent-light);
+  border-radius: var(--radius-l);
+  padding: 1rem .5rem;
+}
+
+.case-page--apparel .shifts-table,
+.case-page--apparel .shifts-table tbody {
+  display: block;
+  width: 100%;
+}
+
+.case-page--apparel .shifts-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: var(--fs-14);
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .shifts-table thead {
+  display: none;
+}
+
+.case-page--apparel .shifts-table tbody tr {
+  display: grid;
+  grid-template-columns:
+    26%
+    minmax(0, 1fr)
+    28px
+    minmax(0, 1fr);
+  align-items: center;
+  position: relative;
+  border-bottom: 0;
+}
+
+.case-page--apparel .shifts-table tbody tr::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.case-page--apparel .shifts-table tbody tr:last-child::before {
+  display: none;
+}
+
+.case-page--apparel .shifts-table tbody th,
+.case-page--apparel .shifts-table tbody td {
+  min-width: 0;
+  padding: 1rem;
+  border: 0;
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.case-page--apparel .shifts-table tbody th {
+  grid-column: 1;
+  font-weight: var(--fw-bold);
+}
+
+.case-page--apparel .shifts-table tbody td:nth-child(2) {
+  grid-column: 2;
+}
+
+.case-page--apparel .shifts-table tbody td:nth-child(3) {
+  grid-column: 4;
+}
+
+/* Arrow between Before and After */
+.case-page--apparel .shifts-table tbody tr::after {
+  content: "→";
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  color: var(--case-accent-strong); /* shift table箭頭顏色 */
+  font-size: 18px;
+  line-height: 1;
+}
+
+.case-page--apparel .shift-before,
+.case-page--apparel .shift-after {
+  display: block;
+}
+
+.case-page--apparel .shift-before {
+  color: #777575; /* shift table old顏色 */
+}
+
+.case-page--apparel .shift-after {
+  color: var(--text-primary); /* shift table new顏色 */
+}
+
+
+/* =========================================================
+   BUSINESS IMPACT
+========================================================= */
+
+.case-page--apparel .impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.case-page--apparel .impact-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--light-gray);
+  border-top: 2px solid var(--case-accent-strong);
+  border-radius: 14px;
+  background: #FFFFFF;
+}
+
+.case-page--apparel .impact-card h4 {
+  margin: 0 0 0.75rem;
+  font-size: var(--fs-20);
+  line-height: var(--lh-tight);
+}
+
+.case-page--apparel .impact-card p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: var(--fs-16);
+  line-height: var(--lh-relaxed);
+}
+
+.case-page--apparel .impact-comparison-summary {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+  color: var(--dark-gray);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .case-page--apparel .impact-panels {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .case-page--apparel .impact-panel__content {
+    padding: 1rem;
+  }
+
+   .case-page--apparel .impact-badge-position {
+     width: 100%;
+   }
+
+  .case-page--apparel .impact-before-flows {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .case-page--apparel .impact-flow-node {
+    padding: 9px 5px;
+    font-size: 12px;
+    min-height: 40px;
+  }
+
+   .case-page--apparel .impact-panel--after
+   .impact-after-flow > .impact-flow-node,
+   .case-page--apparel .impact-panel--after
+   .impact-after-flow > .impact-flow-arrow,
+   .case-page--apparel .impact-panel--after
+   .impact-after-flow > .impact-flow-records {
+     width: 200px;
+   }
+
+   .case-page--apparel .impact-panel--after
+   .impact-after-website-row > .impact-flow-node--website {
+     flex: 0 0 200px;
+     width: 200px;
+     max-width: 200px;
+   }
+
+   .case-page--apparel .impact-customer-sync {
+     left: calc(50% + 110px);
+   }
+
+  .case-page--apparel .impact-flow-arrow__note {
+    font-size: 10px;
+  }
+
+   .case-page--apparel .impact-operations {
+     gap: 0.5rem;
+   }
+
+   .case-page--apparel .impact-downstream {
+     width: 100%;
+   }
+
+  .case-page--apparel .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-page--apparel .impact-card {
+    padding: 1.25rem;
+  }
+
+   .case-page--apparel .shifts-table-wrap {
+     width: 100%;
+   }
+   
+}
+
+
+
+@media (max-width: 650px) {
+
+  /* Mobile tabs */
+  .case-page--apparel .impact-tabs {
+    display: grid;
+  }
+
+  .case-page--apparel .impact-panels {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .case-page--apparel .impact-panel[hidden] {
+    display: none !important;
+  }
+
+  .case-page--apparel .impact-panel {
+    min-height: 392px;
+    height: auto;
+  }
+
+   .case-page--apparel .impact-flow-arrow {
+     min-height: 28px;
+   }
+   
+   .case-page--apparel .impact-panel--after
+   .impact-after-flow > .impact-flow-node,
+   .case-page--apparel .impact-panel--after
+   .impact-after-flow > .impact-flow-arrow,
+   .case-page--apparel .impact-panel--after
+   .impact-after-flow > .impact-flow-records {
+     width: 160px;
+   }
+
+  .case-page--apparel .impact-panel--after
+  .impact-after-website-row > .impact-flow-node--website {
+    flex: 0 1 160px;
+    width: 160px;
+    min-width: 0;
+    max-width: 160px;
+  }
+
+   /* Make flow nodes more compact on mobile */
+   .case-page--apparel .impact-flow-node {
+     padding: 4px 2px;
+     min-height: 32px;
+     line-height: 1.3;
+   }
+
+  /* Customer sync */
+  .case-page--apparel .impact-customer-sync {
+    font-size: 10px;
+  }
+
+  .case-page--apparel .impact-customer-sync__arrow {
+    font-size: 16px;
+  }
+
+   .case-page--apparel .impact-customer-sync {
+     left: calc(50% + 90px);
+   }
+
+  /* Downstream operations */
+  .case-page--apparel .impact-downstream {
+    padding: 1rem;
+  }
+
+  .case-page--apparel .impact-operations {
+    /* grid-template-columns: 1fr; */
+    gap: 0.25rem;
+  }
+
+  .case-page--apparel .impact-panel__content {
+    padding: 1.5rem;
+  }
+
+  .case-page--apparel .impact-operation {
+    padding: 0.75rem 0.25rem;
+    font-size: var(--fs-12);
+  }
+     /* Mobile: show only the badge for the active workflow */
+  .case-page--apparel .impact-badge-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .case-page--apparel
+  .impact-comparison[data-active-workflow="before"]
+  .impact-connector-badge--after {
+    display: none;
+  }
+
+  .case-page--apparel
+  .impact-comparison[data-active-workflow="after"]
+  .impact-connector-badge--before {
+    display: none;
+  }
+
+  /* One selected flow connects to the shared module */
+  .case-page--apparel .impact-connector {
+    height: 28px;
+    margin-inline: 0;
+  }
+
+   /* Hide connector pseudo-elements by default */
+   .case-page--apparel .impact-connector::before,
+   .case-page--apparel .impact-connector::after {
+     display: none;
+   }
+   
+   /* Keep the arrowhead on the centralized solid connector */
+   .case-page--apparel .impact-connector--centralized::after {
+     display: block;
+   }
+
+  .case-page--apparel .impact-downstream {
+    padding: 1.125rem;
+  }
+
+  .case-page--apparel .subsection-heading {
+    margin-bottom: 1rem;
+  }
+
+  .case-page--apparel .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .case-page--apparel .impact-card {
+    padding: 1.125rem;
+  }
+
+  .case-page--apparel .impact-card h4 {
+    font-size: 18px;
+  }
+
+   .case-page--apparel .impact-card p {
+     font-size: var(--fs-14);
+   }
+
+  .case-page--apparel .shifts-table-wrap {
+     width: 100%;
+     padding: 1rem .25rem;
+   }
+
+ /* Structural shifts: stacked comparison rows */
+ .case-page--apparel .shifts-table tbody tr {
+    grid-template-columns:
+      minmax(0, 1fr)
+      16px
+      minmax(0, 1fr);
+    padding: 0.875rem 0;
+  } 
+
+  .case-page--apparel .shifts-table tbody tr:first-child {
+    padding-top: 0;
+  }
+
+  .case-page--apparel .shifts-table tbody tr:last-child {
+    padding-bottom: 0;
+  }
+
+  .case-page--apparel .shifts-table tbody th {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding: 0 1rem 0.625rem; /* shift table標題列左右1padding */
+  } 
+
+  .case-page--apparel .shifts-table tbody td {
+    grid-row: 2;
+    padding: 0 1rem;
+  }
+
+  .case-page--apparel .shifts-table tbody td:nth-child(2) {
+    grid-column: 1;
+    padding-right: 0.5rem;
+    padding-left: 1.5rem; /* shift table比較列old */
+  }
+
+  .case-page--apparel .shifts-table tbody td:nth-child(3) {
+    grid-column: 3;
+    padding-right: 0.5rem;
+    padding-left: 1rem; /* shift table比較列new */
+  } 
+
+  .case-page--apparel .shifts-table tbody tr::after {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .case-page--apparel .impact-comparison-summary {
+    margin-top: 1.25rem;
+    font-size: var(--fs-16);
+  }
+   
+}
+
+
+/* =========================================================
+   08 — WHAT'S NEXT
+========================================================= */
+
+.case-page--apparel .case-section--next {
+  background: var(--case-accent-light);
+}
+
+.case-page--apparel .next-copy {
+  color: var(--dark-gray);
+}
+
+/* Next Step Card */
+
+.case-page--apparel .next-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-m);
+  background: var(--background);
+}
+
+.case-page--apparel .next-step-label {
+  color: var(--case-accent-dark);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-page--apparel .next-step-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-24);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+}
+
+/* Supporting Text */
+
+.case-page--apparel .next-step-content p {
+  margin: 0 0 1.5rem;
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+  color: var(--dark-gray);
+}
+
+.case-page--apparel .next-step-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .case-page--apparel .next-step-card {
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+
+  .case-page--apparel .next-step-card h3 {
+    font-size: var(--fs-20);
+  }
+}
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+  --btt-bg: var(--case-accent);
+  --btt-color: var(--case-accent-dark);
+  --btt-hover-bg: var(--case-accent-soft);
+}
+
+/* =========================================================
+   SHARED
+========================================================= */
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+.case-page--apparel .case-hero h1 {
+  font-size: 38px;
+}
+   
+}
+
+@media (max-width: 650px) {
+
+.case-page--apparel .case-hero h1 {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.case-page--apparel .apparel-title-break {
+  display: none;
+}   
+   
+.case-page--apparel .case-section h2 {
+  font-size: var(--fs-20);
+}
+
+.case-page--apparel .apparel-overview-summary {
+  grid-template-columns: 1fr;
+}
+
+.case-page--apparel .case-section p {
+  font-size: var(--fs-16);
+  line-height: var(--lh-normal);
+}
+
+}

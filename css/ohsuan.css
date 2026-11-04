@@ -1,0 +1,893 @@
+/* ohsuan.css */
+/* =========================================================
+   O,HSUAN CASE PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   CASE VARIABLES
+========================================================= */
+
+.case-page--ohsuan {
+    --ohsuan-muted: #77736E;
+    --ohsuan-light: #E7E2DB;
+    --ohsuan-accent: #9A6B45;
+}
+
+
+body.case-page {
+    background: #F3F0EB;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.case-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.case-label {
+    margin: 0 0 1.5rem; /* 頁面副標跟標題之間的距離 */
+
+    font-family: var(--font-body);
+    font-size: var(--fs-12);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--ohsuan-accent);
+}
+
+.case-intro h1 {
+    max-width: 850px;
+   
+    margin: 0;
+   
+    font-family: var(--font-special);
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+}
+
+.case-intro-text {
+    max-width: 800px;
+
+    margin: 2rem 0 0; /* 頁面標題跟敘述之間的距離 */
+
+    font-family: var(--font-display);
+    font-size: var(--fs-24);
+    line-height: var(--lh-tight);
+    font-weight: 300;
+    color: var(--ohsuan-muted);
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.identity-section {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(220px, 1fr);
+
+    column-gap: 0;
+
+    align-items: center;
+
+    border-top: 1px solid var(--ohsuan-light);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-copy {
+    max-width: 650px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+
+    gap: 0.75rem; /* 小標數字跟文字的距離 */
+
+    margin-bottom: 2.5rem; /* 小標跟文字的距離 */
+
+    color: var(--ohsuan-accent);
+}
+
+.section-number {
+    flex: 0 0 auto;
+
+    font-family: var(--font-special);
+    font-size: var(--fs-24); /* 小標數字大小 */
+    line-height: 1;
+
+    color: var(--ohsuan-muted);
+}
+
+.section-copy h2 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: var(--fs-24); /* 小標文字大小 */
+    font-weight: var(--fw-regular);
+    line-height: 1;
+}
+
+.section-copy p {
+    max-width: 620px;
+
+    margin-bottom: 1.25rem;
+
+    font-size: 18px;
+    line-height: var(--lh-relaxed);
+
+    color: var(--dark-gray);
+}
+
+.section-copy p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   VISUAL AREA
+========================================================= */
+
+.identity-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 0;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   01 — OLD IDENTITY
+========================================================= */
+
+.old-logo {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+
+    flex: 0 0 auto;
+}
+
+
+/* Center H */
+
+.old-logo-h {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    font-family:
+        "Copperplate",
+        "Copperplate Gothic Light",
+        serif;
+
+    font-size: 70px;
+    font-weight: var(--fw-regular);
+
+    line-height: 1;
+}
+
+
+/* Rotating circular name */
+
+.old-logo-ring {
+    position: absolute;
+
+    inset: 0;
+
+    animation:
+        old-logo-rotate 32s linear infinite;
+}
+
+.ring-letter {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 10px;
+
+    margin-left: -5px;
+    margin-top: -5px;
+
+    font-family: "Cormorant Upright", serif;
+
+    font-size: var(--fs-14);
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-align: center;
+
+    transform-origin: 5px 5px;
+}
+
+
+/* 24 letters */ /* translateY字母間空隙 */
+
+.l01 {
+    transform: rotate(0deg) translateY(-50px) rotate(180deg);
+}
+
+.l02 {
+    transform: rotate(15deg) translateY(-50px) rotate(180deg);
+}
+
+.l03 {
+    transform: rotate(30deg) translateY(-50px) rotate(180deg);
+}
+
+.l04 {
+    transform: rotate(45deg) translateY(-50px) rotate(180deg);
+}
+
+.l05 {
+    transform: rotate(60deg) translateY(-50px) rotate(180deg);
+}
+
+.l06 {
+    transform: rotate(75deg) translateY(-50px) rotate(180deg);
+}
+
+.l07 {
+    transform: rotate(90deg) translateY(-50px) rotate(180deg);
+}
+
+.l08 {
+    transform: rotate(105deg) translateY(-50px) rotate(180deg);
+}
+
+.l09 {
+    transform: rotate(120deg) translateY(-50px) rotate(180deg);
+}
+
+.l10 {
+    transform: rotate(135deg) translateY(-50px) rotate(180deg);
+}
+
+.l11 {
+    transform: rotate(150deg) translateY(-50px) rotate(180deg);
+}
+
+.l12 {
+    transform: rotate(165deg) translateY(-50px) rotate(180deg);
+}
+
+.l13 {
+    transform: rotate(180deg) translateY(-50px) rotate(180deg);
+}
+
+.l14 {
+    transform: rotate(195deg) translateY(-50px) rotate(180deg);
+}
+
+.l15 {
+    transform: rotate(210deg) translateY(-50px) rotate(180deg);
+}
+
+.l16 {
+    transform: rotate(225deg) translateY(-50px) rotate(180deg);
+}
+
+.l17 {
+    transform: rotate(240deg) translateY(-50px) rotate(180deg);
+}
+
+.l18 {
+    transform: rotate(255deg) translateY(-50px) rotate(180deg);
+}
+
+.l19 {
+    transform: rotate(270deg) translateY(-50px) rotate(180deg);
+}
+
+.l20 {
+    transform: rotate(285deg) translateY(-50px) rotate(180deg);
+}
+
+.l21 {
+    transform: rotate(300deg) translateY(-50px) rotate(180deg);
+}
+
+.l22 {
+    transform: rotate(315deg) translateY(-50px) rotate(180deg);
+}
+
+.l23 {
+    transform: rotate(330deg) translateY(-50px) rotate(180deg);
+}
+
+.l24 {
+    transform: rotate(345deg) translateY(-50px) rotate(180deg);
+}
+
+
+@keyframes old-logo-rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   02 — NAME REARRANGEMENT
+========================================================= */
+
+.rearrange-stage {
+    position: relative;
+
+    width: 360px;
+    height: 220px;
+
+    flex: 0 0 auto;
+
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+
+/* Shared */
+
+.rearrange-stage > span {
+    position: absolute;
+
+    top: 90px;
+
+    white-space: nowrap;
+}
+
+
+/* Hsuan */
+
+.rearrange-word.hsuan {
+    left: 60px;
+
+    animation:
+        rearrange-hsuan 12s ease-in-out infinite;
+}
+
+
+/* Ouyang */
+
+.rearrange-word.ouyang {
+    left: 165px;
+    top: 90px;
+
+    animation:
+        rearrange-ouyang 12s ease-in-out infinite;
+}
+
+
+/* Comma */
+
+.rearrange-comma {
+    position: absolute;
+
+    top: 90px;
+
+    opacity: 0;
+}
+
+.comma-one {
+    left: 175px;
+
+    animation:
+        rearrange-comma-one 12s ease-in-out infinite;
+}
+
+
+/* uyang disappears */
+
+.uyang-letter {
+    display: inline-block;
+
+    animation:
+        rearrange-uyang 12s ease-in-out infinite;
+}
+
+.h-letter {
+    left: 135px;
+
+    opacity: 0;
+
+    animation:
+        rearrange-h 12s ease-in-out infinite;
+}
+
+.hsuan-h {
+    display: inline-block;
+
+    animation:
+        rearrange-hsuan-h 12s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   NAME REARRANGEMENT — TIMELINE
+========================================================= */
+
+@keyframes rearrange-hsuan {
+
+    0%,
+    15% {
+        left: 60px;
+    }
+
+    35%,
+    45% {
+        left: 195px;
+    }
+
+    60%,
+    70% {
+        left: 160px;
+    }
+
+    75%,
+    85% {
+        left: 180px;
+    }
+
+    90%,
+    100% {
+        left: 129px;
+    }
+}
+
+@keyframes rearrange-ouyang {
+
+    0%,
+    15% {
+        left: 165px;
+        top: 90px;
+    }
+
+    25% {
+        left: 60px;
+        top: 55px;
+    }
+
+    30%,
+    45% {
+        left: 60px;
+        top: 90px;
+    }
+
+    60%,
+    70% {
+        left: 110px;
+        top: 90px;
+    }
+
+    75%,
+    100% {
+        left: 105px;
+        top: 90px;
+    }
+}
+
+@keyframes rearrange-comma-one {
+
+    0%,
+    25% {
+        opacity: 0;
+        left: 175px;
+    }
+
+    30%,
+    45% {
+        opacity: 1;
+        left: 175px;
+    }
+
+    60%,
+    70% {
+        opacity: 1;
+        left: 140px;
+    }
+
+    75%,
+    85% {
+        opacity: 1;
+        left: 160px;
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+        left: 160px;
+    }
+
+}
+
+@keyframes rearrange-uyang {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    55%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rearrange-h {
+
+    0%,
+    74% {
+        left: 135px;
+        opacity: 0;
+    }
+
+    75%,
+    100% {
+        left: 135px;
+        opacity: 1;
+    }
+}
+
+@keyframes rearrange-hsuan-h {
+
+    0%,
+    78% {
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   03 — OCEAN
+========================================================= */
+
+.ocean-breakdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: max-content;
+
+    font-family: var(--font-display);
+    line-height: 1;
+}
+
+.ocean-line {
+    display: flex;
+    align-items: baseline;
+}
+
+
+/* O / Hsuan / Ocean */
+
+.ocean-source {
+    gap: 0.65rem; /* O跟Hsuan之間的距離 */
+
+    font-size: 2.5rem;
+}
+
+.ocean-source > span {
+    display: inline-flex;
+    align-items: baseline;
+
+    gap: 0.35rem;
+
+    white-space: nowrap;
+}
+
+.ocean-source small,
+.ocean-result small {
+    font-family: var(--font-display);
+
+    font-size: 0.35em; /* 音標大小 */
+    font-weight: var(--fw-regular);
+
+    color: var(--ohsuan-accent);
+
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.ocean-source > span:nth-child(2) {
+    font-family: var(--font-display);
+    font-size: 0.65em;
+
+    color: var(--ohsuan-muted);
+}
+
+
+/* Second row */
+
+.ocean-approx {
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 0.8rem 0;
+
+    font-family: var(--font-display);
+    font-size: 2rem;
+
+    color: var(--ohsuan-muted);
+}
+
+
+/* Third row */
+
+.ocean-result {
+    font-size: 2.5rem;
+}
+
+.ocean-result > span {
+    display: inline-flex;
+    align-items: baseline;
+
+    gap: 0.45rem;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   04 — COMMA
+========================================================= */
+
+.comma-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2.2rem;
+
+    width: auto;
+}
+
+.comma-word {
+    display: flex;
+    align-items: baseline;
+
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    line-height: 0.8;
+}
+
+.comma-letter,
+.comma-mark,
+.comma-rest {
+    display: inline-block;
+}
+
+.comma-mark {
+    width: 0;
+
+    opacity: 0;
+
+    overflow: visible;
+
+    animation:
+        comma-appear 6s ease-in-out infinite;
+}
+
+.comma-letter {
+    animation:
+        comma-left 6s ease-in-out infinite;
+}
+
+.comma-rest {
+    animation:
+        comma-right 6s ease-in-out infinite;
+}
+
+
+@keyframes comma-appear {
+
+    0%,
+    12% {
+        width: 0;
+        opacity: 0;
+    }
+
+    25%,
+    72% {
+        width: 0.22em;
+        opacity: 1;
+    }
+
+    86%,
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes comma-left {
+
+    0%,
+    12% {
+        transform: translateX(0);
+    }
+
+    25%,
+    72% {
+        transform: translateX(-0.06em);
+    }
+
+    86%,
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes comma-right {
+
+    0%,
+    12% {
+        transform: translateX(0);
+    }
+
+    25%,
+    72% {
+        transform: translateX(0.06em);
+    }
+
+    86%,
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   05 — FINAL NAME
+========================================================= */
+
+.final-name {
+    font-family: var(--font-special);
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 0.85;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.case-page--ohsuan .back-to-top {
+  --btt-bg: var(--ohsuan-light);
+  --btt-color: var(--ohsuan-accent);
+  --btt-hover-bg: #D4C8BB;
+}
+
+.case-page--ohsuan .back-to-top:hover {
+  color: #7D5234;
+}
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+   
+    .case-intro h1 {
+        font-size: 70px;
+    }
+
+   
+    .identity-section {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        row-gap: 0;
+    }
+
+
+    .identity-visual {
+        justify-content: center;
+
+        min-height: 300px;
+    }
+
+
+    .rearrange-stage {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .case-intro h1 {
+        font-size: 52px;
+    }
+
+   
+    .case-intro-text {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .section-heading {
+        gap: 0.6rem;
+    }
+
+    .section-copy h2 {
+        font-size: var(--fs-20);
+    }
+
+    .section-copy p {
+        font-size: 16px;
+    }
+
+    .old-logo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ring-letter {
+        font-size: var(--fs-12);
+    }
+
+    .rearrange-stage {
+        width: 100%;
+        height: 180px;
+    }
+
+    .ocean-source {
+        font-size: 2.6rem;
+    }
+
+    .ocean-result {
+        font-size: 2.5rem;
+    }
+
+    .comma-word {
+        font-size: 2.5rem;
+    }
+
+    .final-name {
+        font-size: 2.5rem;
+    }
+}
