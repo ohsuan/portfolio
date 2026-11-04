@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hospital Clinical Training — O,hsuan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;500;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hospital.css">
+</head>
+
+  <body class="case-page case-page--hospital">
+
+    <!-- ======================================================
+         HEADER
+    ======================================================= -->
+
+    <header class="site-header">
+      <a
+        class="wordmark"
+        href="../index.html"
+        aria-label="O,hsuan, home"
+      >
+        O,hsuan
+      </a>
+    
+      <nav aria-label="Primary navigation">
+        <a href="../index.html#selected-work">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../resume.html">Resume</a>
+      </nav>
+    </header>
+
+
+    <main>
+
+      <!-- ====================================================
+           HERO
+      ===================================================== -->
+
+      <section class="case-hero">
+        <div class="page-width">
+
+          <p class="case-eyebrow">
+            HOSPITAL CLINICAL TRAINING · PRODUCT
+          </p>
+
+          <h1>
+            Building a Digital System
+            <span class="hospital-title-break"><br></span>
+            Alongside an Existing Paper-Based Process
+          </h1>
+
+          <p class="case-subtitle">
+            Designing a digital evaluation experience while minimizing added work for users.
+          </p>
+
+
+          <div class="hospital-overview">
+
+            <!-- Role / Team -->
+
+            <div class="hospital-overview-meta">
+
+              <div class="overview-meta-item">
+                <span class="overview-label">ROLE</span>
+                <p>Product Management &amp; UX</p>
+              </div>
+
+              <div class="overview-meta-item">
+                <span class="overview-label">TEAM</span>
+                <p>2 (Me as PM/UX, 1 Engineer/PM)</p>
+              </div>
+
+            </div>
+
+
+            <!-- Challenge / Solution -->
+
+            <div class="hospital-overview-summary">
+
+              <article class="overview-summary-item">
+                <h2>Challenge</h2>
+                <p>
+                  Design a digital competency evaluation process 
+                  that could work alongside existing paper-based training 
+                  while fitting the realities of clinical practice.
+                </p>
+              </article>
+
+              <article class="overview-summary-item">
+                <h2>Solution</h2>
+                <p>
+                  Defined an in-context evaluation workflow, 
+                  simplified evaluator participation by removing separate system accounts, 
+                  and designed learner and administrator experiences for the new system.
+                </p>
+              </article>
+
+            </div>
+
+
+            <!-- Contribution -->
+
+            <section class="hospital-contribution">
+              <h2>Contribution</h2>
+
+              <div class="hospital-contribution-grid">
+
+                <article class="hospital-contribution-item">
+                  <h3>Workflow Discovery:</h3>
+                  <p>
+                    Examined the proposed evaluation process against clinical practice 
+                    and identified assumptions that needed to be reconsidered.
+                  </p>
+                </article>
+
+                <article class="hospital-contribution-item">
+                  <h3>Product Decisions:</h3>
+                  <p>
+                    Reframed evaluation scheduling, simplified evaluator participation, 
+                    and deferred additional functionality to keep the initial workflow focused.
+                  </p>
+                </article>
+
+                <article class="hospital-contribution-item">
+                  <h3>UX &amp; Workflow Design:</h3>
+                  <p>
+                    Designed the learner and administrator experiences around 
+                    the revised evaluation workflow.
+                  </p>
+                </article>
+
+                <article class="hospital-contribution-item">
+                  <h3>Delivery &amp; Validation Planning:</h3>
+                  <p>
+                    Planned usage logging with the engineer to monitor system usage 
+                    and inform future product decisions.
+                  </p>
+                </article>
+
+              </div>
+            </section>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- ====================================================
+           01 A Paper-Based Training Process
+      ===================================================== -->
+
+      <section class="case-section hospital-background" id="background">
+        <div class="page-width">
+
+          <div class="case-section-heading">
+            <span class="case-section-number">01</span>
+            <h2>A Paper-Based Training Process</h2>
+          </div>
+
+
+          <div class="hospital-background-intro">
+            <p class="case-lead">
+              The client is a hospital that provides training and
+              certification programs for healthcare professionals,
+              including physicians, pharmacists, nutritionists, and nurses.
+              At the time, the training process was primarily paper-based.
+            </p>
+
+            <p>
+              The initial request was to digitize the training system,
+              which included three user roles:
+            </p>
+          </div>
+
+
+          <!-- USER ROLES -->
+
+          <div class="hospital-roles">
+          
+            <div class="hospital-role-grid">
+          
+              <article class="hospital-role-card">
+                <h4>Learner</h4>
+                <p>Completes training and evaluations.</p>
+              </article>
+          
+              <article class="hospital-role-card">
+                <h4>Evaluator</h4>
+                <p>Physicians who assess learners’ clinical performance.</p>
+              </article>
+          
+              <article class="hospital-role-card">
+                <h4>Administrator</h4>
+                <p>Manages users, evaluation tasks, and records.</p>
+              </article>
+          
+            </div>
+          </div>
+
+
+          <div class="hospital-background-intro hospital-background-intro--workflow">
+            <p>
+              The workflow was designed around advance scheduling.
+              Learners could request evaluation sessions with physicians
+              through the system, and both parties could view their
+              scheduled sessions on a calendar.
+            </p>
+          </div>
+
+
+          <!-- SCHEDULING WORKFLOW -->
+          
+          <div class="hospital-scheduling">
+          
+            <div class="hospital-flow">
+          
+              <div class="hospital-flow-step">
+                <p>Learner requests an evaluation session</p>
+              </div>
+          
+              <div class="hospital-flow-arrow" aria-hidden="true">
+                <svg viewBox="0 0 32 16" fill="none">
+                  <path d="M2 8H29M23 2L29 8L23 14"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+          
+              <div class="hospital-flow-step">
+                <p>Evaluator arranges the evaluation time</p>
+              </div>
+          
+              <div class="hospital-flow-arrow" aria-hidden="true">
+                <svg viewBox="0 0 32 16" fill="none">
+                  <path d="M2 8H29M23 2L29 8L23 14"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+          
+              <div class="hospital-flow-step">
+                <p>Scheduled session appears on the calendar</p>
+              </div>
+          
+            </div>
+          
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ====================================================
+           02 When Digital Doesn't Replace Paper
+      ===================================================== -->
+      <section class="case-section hospital-context" id="hospital-context">
+          <div class="page-width">
+        
+            <div class="case-section-heading">
+              <span class="case-section-number">02</span>
+              <h2>When Digital Doesn't Replace Paper</h2>
+            </div>
+        
+            <div class="hospital-context-intro">
+              <p>
+                As I worked with the client to understand the existing process,
+                I learned that the new system would not replace any part of the
+                paper-based training process. Instead, it would introduce an
+                entirely new set of digital learning content and competency-based
+                evaluations alongside the existing workflow.
+                This meant users weren't just adopting a new tool. 
+                They were taking on additional work:
+              </p>
+            </div>
+        
+            <div class="hospital-context-model">
+
+              <div class="hospital-context-processes">
+                <article class="hospital-context-card hospital-context-card--existing">
+                  <span class="hospital-context-label">EXISTING PROCESS</span>
+                  <h3>Paper-Based Training</h3>
+                </article>
+          
+                <article class="hospital-context-card hospital-context-card--new">
+                  <span class="hospital-context-label">NEW PROCESS</span>
+                  <h3>Digital Evaluation</h3>
+                </article>
+              </div>
+        
+              <ul class="hospital-context-list">
+                <li>Learning a new digital system</li>
+                <li>Learning entirely new content and evaluation requirements</li>
+                <li>Completing additional digital steps</li>
+                <li>Switching between paper and digital workflows</li>
+                <li>Keeping track of information across different processes</li>
+              </ul>
+            </div>
+        
+            <div class="hospital-context-conclusion">
+              <p>
+                This changed how I approached the problem. It was no longer
+                simply digitizing an existing process. The challenge became
+                designing a new digital evaluation experience that could coexist
+                with the paper-based training process while minimizing the
+                additional effort required from users.
+              </p>
+            </div>
+        
+          </div>
+        </section>
+
+      <!-- ====================================================
+           03 Understanding the Clinical Context
+      ===================================================== -->
+
+        <section class="case-section hospital-clinical-context" id="clinical-context">
+        
+          <div class="page-width">
+        
+            <div class="case-section-heading">
+              <span class="case-section-number">03</span>
+              <h2>Understanding the Clinical Context</h2>
+            </div>
+        
+            <div class="hospital-clinical-content">
+        
+              <!-- Introduction -->
+              <div class="hospital-clinical-intro">
+                <p>
+                  Before defining the product workflow, I first needed to understand
+                  how evaluations actually took place in the clinical environment.
+                  The initial proposal was to allow learners to schedule evaluations
+                  with physicians in advance. However, understanding how evaluations
+                  happened in practice revealed a mismatch between this approach
+                  and the clinical environment.
+                </p>
+
+                <p>
+                  An evaluation depended on three conditions:
+                </p>
+              </div>
+        
+              <!-- Three conditions -->
+              <div class="hospital-clinical-model">
+        
+              <div class="hospital-clinical-conditions">
+              
+                <article class="hospital-clinical-condition">
+                  <span class="hospital-clinical-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12.5L10 17L19 7"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <h3>A Relevant Clinical Situation Occurs</h3>
+                </article>
+              
+                <article class="hospital-clinical-condition">
+                  <span class="hospital-clinical-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12.5L10 17L19 7"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <h3>The Learner Is Ready to Perform the Task</h3>
+                </article>
+              
+                <article class="hospital-clinical-condition">
+                  <span class="hospital-clinical-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12.5L10 17L19 7"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <h3>An Appropriate Physician Is Available</h3>
+                </article>
+              
+              </div>
+        
+                <div class="hospital-clinical-connector" aria-hidden="true"></div>
+        
+                <div class="hospital-clinical-outcome">
+                  <h3>Evaluation Can Take Place</h3>
+                </div>
+        
+              </div>
+        
+              <!-- Conclusion -->
+              <div class="hospital-clinical-conclusion">
+                <p>
+                  Since these conditions could come together spontaneously during
+                  an existing clinical workflow, evaluations often needed to happen
+                  in the moment rather than at a previously scheduled time.
+                </p>
+        
+                <p>
+                  A scheduling-based workflow could introduce unnecessary delays
+                  and make it harder to fit evaluations naturally into the clinical
+                  workflow. This led me to reconsider how the evaluation process
+                  should be organized around actual clinical practice.
+                </p>
+              </div>
+        
+            </div>
+        
+          </div>
+        
+        </section>
+
+        <!-- ====================================================
+             04 Rethinking the Evaluation Workflow
+        ===================================================== -->
+
+        <section class="case-section hospital-rethinking-workflow" id="rethinking-workflow">
+          <div class="page-width">
+        
+            <div class="case-section-heading">
+              <span class="case-section-number">04</span>
+              <h2>Rethinking the Evaluation Workflow</h2>
+            </div>
+        
+        
+            <!-- Decision 01 -->
+            <div class="hospital-decision">
+        
+              <p class="hospital-decision-description">
+                Rather than scheduling evaluations in advance,
+                I reframed the workflow around the clinical context.
+                Learners could initiate an evaluation when a suitable clinical situation arose,
+                allowing the process to fit more naturally into the practice.
+              </p>
+        
+              <div class="hospital-decision-card">
+        
+                <div class="hospital-decision-header">
+                  <span class="hospital-decision-label">DECISION 01</span>
+                  <h3>From Scheduled to In-Context Evaluation</h3>
+                </div>
+        
+                <div class="hospital-timing-comparison">
+        
+                  <div class="hospital-timing-card">
+                    <div class="hospital-timing-text">
+                      <h4>Scheduled in Advance</h4>
+                    </div>
+                  </div>
+        
+                  <div class="hospital-timing-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 40 24" fill="none">
+                      <path d="M2 12H36M27 3L36 12L27 21"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+        
+                  <div class="hospital-timing-card hospital-timing-card--highlight">
+                    <div class="hospital-timing-text">
+                      <h4>In-Context Evaluation</h4>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+        
+        
+            <!-- Decision 02 -->
+            <div class="hospital-decision">
+        
+              <p class="hospital-decision-description">
+                With the evaluation process no longer dependent on advance scheduling,
+                I also reconsidered whether physicians needed their own system accounts.
+              </p>
+        
+              <p>
+                Physicians already had demanding clinical responsibilities.
+                Requiring them to maintain separate login credentials
+                and learn another system for an occasional task could introduce unnecessary friction
+                and increase the risk of delayed or incomplete evaluations.
+              </p>
+        
+              <p>
+                After discussing the workflow with the engineer,
+                I proposed removing Evaluators from the formal system user model
+                while retaining their role in completing assessments.
+                Learners would initiate and manage the evaluation process,
+                while physicians could complete assessments directly on the learner's device
+                without needing a separate account or login.
+              </p>
+        
+        
+              <div class="hospital-decision-card">
+        
+                <div class="hospital-decision-header">
+                  <span class="hospital-decision-label">DECISION 02</span>
+                  <h3>Removing the Evaluator as a System User</h3>
+                </div>
+        
+                <!-- Role Comparison -->
+                <div class="hospital-role-comparison">
+                
+                  <!-- Initial -->
+                  <div class="hospital-role-panel">
+                    <div class="hospital-role-list">
+                
+                      <div class="hospital-role-item">
+                        <span class="hospital-role-name">Learner</span>
+                        <span class="hospital-role-access">Account + Login</span>
+                      </div>
+                
+                      <div class="hospital-role-item">
+                        <span class="hospital-role-name">Evaluator</span>
+                        <span class="hospital-role-access">Account + Login</span>
+                      </div>
+                
+                      <div class="hospital-role-item">
+                        <span class="hospital-role-name">Administrator</span>
+                        <span class="hospital-role-access">Account + Login</span>
+                      </div>
+                
+                    </div>
+                  </div>
+                
+                
+                  <div class="hospital-role-transition" aria-hidden="true">
+                    <svg viewBox="0 0 40 24" fill="none">
+                      <path d="M2 12H36M27 3L36 12L27 21"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                
+                
+                  <!-- Revised -->
+                  <div class="hospital-role-panel hospital-role-panel--revised">
+                    <div class="hospital-role-list">
+                
+                      <div class="hospital-role-item">
+                        <span class="hospital-role-name">Learner</span>
+                        <span class="hospital-role-access">Account + Login</span>
+                      </div>
+                
+                      <div class="hospital-role-item hospital-role-item--changed">
+                        <span class="hospital-role-name">Evaluator</span>
+                        <span class="hospital-role-access">
+                          No Account / No Login
+                        </span>
+                      </div>
+                
+                      <div class="hospital-role-item">
+                        <span class="hospital-role-name">Administrator</span>
+                        <span class="hospital-role-access">Account + Login</span>
+                      </div>
+                
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+        
+        
+            <!-- Final Workflow -->
+            <div class="hospital-final-workflow-heading">
+              <h3>The Revised Process</h3>
+            </div>
+        
+            <p class="hospital-final-workflow-summary">
+              The revised workflow allowed learners to initiate evaluations when needed,
+              eliminating the need to request appointments and wait for confirmation.
+              Together, these changes reduced unnecessary steps for both learners and physicians.
+            </p>
+        
+            <div class="hospital-final-workflow">
+              <div class="hospital-final-workflow-steps">
+        
+                <div class="hospital-workflow-step">
+                  <p>Clinical Situation Occurs</p>
+                </div>
+        
+                <div class="hospital-workflow-connector" aria-hidden="true">↓</div>
+        
+                <div class="hospital-workflow-step">
+                  <p>Learner Initiates Evaluation</p>
+                </div>
+        
+                <div class="hospital-workflow-connector" aria-hidden="true">↓</div>
+        
+                <div class="hospital-workflow-step">
+                  <p>Select Available Physician</p>
+                </div>
+        
+                <div class="hospital-workflow-connector" aria-hidden="true">↓</div>
+        
+                <div class="hospital-workflow-step">
+                  <p>Hands Over Device</p>
+                </div>
+        
+                <div class="hospital-workflow-connector" aria-hidden="true">↓</div>
+        
+                <div class="hospital-workflow-step">
+                  <p>Physician Completes Evaluation</p>
+                </div>
+        
+              </div>
+            </div>
+        
+          </div>
+        </section>
+
+        <!-- ====================================================
+             05 Designing the Digital Experience
+        ===================================================== -->
+      
+        <section class="case-section hospital-designing-experience" id="designing-experience">
+         <div class="page-width">
+          <div class="case-section-heading">
+            <span class="case-section-number">05</span>
+            <h2>Designing the Digital Experience</h2>
+          </div>
+        
+          <div class="hospital-designing-experience-content">
+        
+            <p class="hospital-designing-experience-intro">
+              With the core workflow and user roles defined, 
+              I translated the product requirements into learner-facing 
+              and administrator-facing experiences, working with the engineer 
+              to align the planned features with implementation needs.
+            </p>
+        
+            <!-- Experience Overview -->
+            <div class="hospital-experience-grid">
+        
+              <div class="hospital-experience-card">
+                <div class="hospital-experience-card-header">
+                  <h3>Learner Experience</h3>
+                  <span class="hospital-experience-platform">Mobile &amp; Desktop</span>
+                </div>
+        
+                <ul>
+                  <li>On-demand Evaluation Initiation</li>
+                  <li>Self-recording &amp; Practice</li>
+                  <li>Task Tracking &amp; Visual Summary</li>
+                </ul>
+              </div>
+        
+              <div class="hospital-experience-card">
+                <div class="hospital-experience-card-header">
+                  <h3>Administrator Experience</h3>
+                  <span class="hospital-experience-platform">Desktop</span>
+                </div>
+        
+                <ul>
+                  <li>User &amp; Task Management</li>
+                  <li>Record Tracking &amp; Management</li>
+                  <li>Search, Filtering &amp; Data Export</li>
+                </ul>
+              </div>
+        
+            </div>
+        
+            <!-- Learner Interface -->
+            <div class="hospital-design-showcase">
+                <p>
+                  The learner experience supported initiating formal evaluations 
+                  for physicians to complete, self-recording and practice, 
+                  tracking pending tasks, reviewing completed records, 
+                  and viewing visual summaries of learning progress. 
+                  The interface was designed separately for mobile and desktop 
+                  to accommodate different working contexts.
+                </p>
+              <div class="hospital-design-inner">
+              <div class="hospital-design-heading">
+                <h3>Learner Overview</h3>
+              </div>
+        
+              <figure class="hospital-design-figure hospital-design-figure--learner">
+                <img
+                  src="../assets/images/hospital/figma-learner-overview.png"
+                  alt="Learner overview interface showing visual summary, pending evaluation tasks, incomplete records, and navigation across desktop and mobile layouts"
+                >
+              </figure>
+              </div>
+            </div>
+        
+            <!-- Administrator Interface -->
+            <div class="hospital-design-showcase">
+               <p>
+                  The administrator experience supported managing users, 
+                  evaluation tasks, and evaluation records, including searching, 
+                  filtering, and exporting information.
+                </p>
+              <div class="hospital-design-inner">
+              <div class="hospital-design-heading">
+                <h3>Record Management</h3>
+              </div>
+        
+              <figure class="hospital-design-figure hospital-design-figure--admin">
+                <img
+                  src="../assets/images/hospital/figma-admin-record-management.png"
+                  alt="Administrator interface for searching, filtering, reviewing, and exporting evaluation records"
+                >
+              </figure>
+            </div>
+            </div>
+        
+            <!-- Future Expansion -->
+            <div class="hospital-designing-experience-closing">
+        
+              <p>
+                While the initial scope focused on digital competency evaluations, 
+                I also considered how the system could eventually support 
+                the broader training process as more paper-based activities became digital. 
+                This consideration informed the product's feature structure 
+                while keeping the initial implementation focused on immediate needs.
+              </p>
+        
+              <p>
+                I developed the Figma designs and reviewed the proposed experience 
+                with the client to gather feedback before implementation.
+              </p>
+        
+            </div>
+        
+          </div>
+         </div>
+        </section>
+
+        <!-- ====================================================
+             06 From Design to Delivery
+        ===================================================== -->
+        <section class="case-section hospital-design-to-delivery" id="design-to-delivery">
+
+         <div class="page-width">
+          <div class="case-section-heading">
+            <span class="case-section-number">06</span>
+            <h2>From Design to Delivery</h2>
+          </div>
+        
+          <div class="hospital-design-to-delivery-content">
+        
+            <!-- Client Feedback -->
+            <div class="hospital-feedback">
+        
+              <p>
+                During the Figma prototype review, 
+                the client's feedback focused mainly on information presentation. 
+                One additional request was to give administrators a way 
+                to follow up on incomplete evaluations, 
+                based on past experience with delayed assessments.
+              </p>
+
+              <p>
+                After discussing the request with the engineer, 
+                we decided to defer the feature and first observe 
+                whether it was needed in practice. This would help keep the 
+                initial scope focused and avoid adding functionality for a situation 
+                that might not occur frequently.
+              </p>
+
+              <p>
+                Incomplete evaluations and any information already entered remained 
+                accessible on the learner's side, allowing learners to follow up when needed. 
+                Administrators could also add evaluation forms through the existing system when necessary. 
+                These existing options provided ways to address incomplete evaluations 
+                during the trial without introducing a separate follow-up feature.
+              </p>
+
+            </div>
+        
+        
+            <!-- Scope Decision -->
+            <div class="hospital-scope-decision">
+
+               <div class="hospital-decision-card">
+              
+                <div class="hospital-decision-header">
+                  <span class="hospital-decision-label">DECISION 03</span>
+                  <h3>Deferring the Follow-up Feature</h3>
+                </div>
+              
+                <div class="hospital-decision-comparison">
+              
+                  <!-- Additional Request -->
+                  <div class="hospital-decision-request">
+                    <span class="hospital-decision-column-label">Additional Request</span>
+              
+                    <div class="hospital-decision-request-card">
+                      <h4>Incomplete Evaluation Follow-up</h4>
+                    </div>
+                  </div>
+              
+                  <!-- Arrow -->
+                  <div class="hospital-decision-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M4 12H19M13 6L19 12L13 18"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+              
+                  <!-- Existing Options -->
+                  <div class="hospital-decision-options">
+                    <span class="hospital-decision-column-label">
+                      Existing Options During the Trial
+                    </span>
+              
+                    <div class="hospital-decision-option-card">
+                      <h4>Learner Access to Incomplete Evaluations</h4>
+                    </div>
+              
+                    <div class="hospital-decision-option-card">
+                      <h4>Administrator Ability to Add Evaluation Forms</h4>
+                    </div>
+              
+                  </div>
+              
+                </div>
+              
+              </div>
+        
+            </div>
+        
+        
+            <!-- Implementation & Monitoring -->
+            <div class="hospital-implementation">  
+              <p>
+                With the core workflow defined and the additional feature deferred 
+                for validation during the trial, we moved forward with implementation.
+              </p>
+        
+              <p>
+                Before delivery, I also worked with the engineer to instrument 
+                key interactions in the evaluation workflow, 
+                creating a basis for analyzing usage patterns and 
+                informing future product decisions.
+              </p>
+        
+              <div class="hospital-monitoring-flow">
+              
+                <div class="hospital-monitoring-step">
+                  <span class="hospital-monitoring-icon">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 12.5L10 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="hospital-monitoring-text">Core Workflow Implemented</span>
+                </div>
+              
+                <div class="hospital-monitoring-connector"></div>
+              
+                <div class="hospital-monitoring-step">
+                  <span class="hospital-monitoring-icon">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 12.5L10 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="hospital-monitoring-text">Key Interactions Instrumented</span>
+                </div>
+              
+                <div class="hospital-monitoring-connector"></div>
+              
+                <div class="hospital-monitoring-step">
+                  <span class="hospital-monitoring-icon">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 12.5L10 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="hospital-monitoring-text">Usage Patterns Inform Future Decisions</span>
+                </div>
+              
+              </div>
+        
+            </div>
+        
+          </div>
+          </div>
+        </section>
+
+        <!-- ====================================================
+             07 From Trial to Ongoing Use
+        ===================================================== -->
+
+        <section class="case-section hospital-ongoing-use" id="ongoing-use">
+         <div class="page-width">
+          <div class="case-section-heading">
+            <span class="case-section-number">07</span>
+            <h2>From Trial to Ongoing Use</h2>
+          </div>
+        
+          <div class="hospital-ongoing-use-content">
+        
+            <!-- Trial & Ongoing Use -->
+            <div class="hospital-ongoing-use-copy">
+        
+              <p>
+                The system was developed and delivered for a three-month trial, 
+                allowing us to observe how the workflow performed in practice 
+                and identify whether further adjustments were needed.
+              </p>
+        
+              <p>
+                During the trial, no further requests were made for changes 
+                to the system's features or workflows. This also supported our initial decision 
+                to defer the follow-up functionality, keeping the workflow simple 
+                and leaving room to revisit the feature if actual use demonstrated a need for it.
+              </p>
+        
+              <p>
+                Following the trial, the system moved into formal use. 
+                We continue to collect usage logs to monitor how the system is used, 
+                support ongoing maintenance, and inform future decisions about 
+                potential feature enhancements and workflow improvements.
+              </p>
+        
+            </div>
+        
+            <!-- Product Lifecycle -->
+              <div class="hospital-lifecycle-grid">
+        
+                <!-- Stage 01 -->
+                <div class="hospital-lifecycle-card">
+                  <h3>Three-Month Trial</h3>
+                  <p>Observe workflow in practice</p>
+        
+                </div>
+        
+                <!-- Stage 02 -->
+                <div class="hospital-lifecycle-card">
+                  <h3>Formal Use</h3>
+                  <p>No further change requests</p>
+        
+                </div>
+        
+                <!-- Stage 03 -->
+                <div class="hospital-lifecycle-card hospital-lifecycle-card--ongoing">
+                  <h3>Ongoing Monitoring</h3>
+                  <p>Usage logs inform future improvements</p>
+        
+                </div>
+        
+              </div>
+        
+          </div>
+          </div>
+        </section>
+      
+    </main>
+
+    <!-- ======================================================
+         BACK TO TOP
+    ======================================================= -->
+
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <svg
+        width="6"
+        height="19"
+        viewBox="0 0 6 19"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M2.88675 0L0 5H5.7735L2.88675 0ZM3.38675 19V4.5H2.38675V19H3.38675Z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+
+      
+    <!-- ======================================================
+         FOOTER
+    ======================================================= -->
+    
+    <footer class="site-footer">
+      <div class="footer-left">
+        <a href="../index.html" class="wordmark">O,hsuan</a>
+        <a href="mailto:hsuanoy25@gmail.com" class="footer-email">
+          hello.ohsuan@gmail.com
+        </a>
+      </div>
+    
+      <div class="footer-right">
+        © 2026 O,hsuan <span>·</span> Designed &amp; built by Hsuan Ouyang
+      </div>
+    </footer>
+
+
+    <script src="../js/script.js"></script>
+
+  </body>
+</html>
